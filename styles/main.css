@@ -205,7 +205,6 @@ svg * {
   max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
   margin-inline: auto;
   padding-inline: var(--container-padding-x);
-  outline: 1px solid red;
 }
 
 .visually-hidden {

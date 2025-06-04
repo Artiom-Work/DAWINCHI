@@ -1,0 +1,21 @@
+@use "../healpers" as *;
+
+.logo {
+  width: fluid(200, 95);
+  height: fluid(62, 29);
+  transition-duration: var(--transition-duration);
+
+  @include hover {
+    filter: invert(1) sepia(0.5) hue-rotate(190deg) saturate(2.5)
+      brightness(80%);
+  }
+
+  @include active {
+    scale: 0.95;
+  }
+
+  &__image {
+    width: inherit;
+    height: inherit;
+  }
+}

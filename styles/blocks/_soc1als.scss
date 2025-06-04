@@ -1,0 +1,63 @@
+@use "../healpers" as *;
+.soc1als {
+  @include tablet-media-above {
+    align-self: flex-end;
+  }
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: rem(3);
+
+    @include tablet-media-above {
+      display: grid;
+      grid-template-rows: 1fr auto;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__item {
+    flex-shrink: 0;
+    width: rem(40);
+    height: rem(40);
+
+    @include mobile-media {
+      width: rem(25);
+      height: rem(25);
+    }
+  }
+
+  &__item--phone-number {
+    width: 100%;
+    height: auto;
+    grid-column: 1 / 4;
+    justify-items: end;
+  }
+
+  &__link {
+    width: inherit;
+    height: inherit;
+    transition-duration: var(--transition-duration);
+
+    @include hover {
+      &:not(.soc1als__link--phone) {
+        filter: brightness(80%);
+      }
+      &.soc1als__link--phone {
+        color: var(--color-accent-light);
+      }
+      &__icon {
+      }
+    }
+    @include active {
+      &:not(.soc1als__link--phone) {
+        filter: brightness(60%);
+        scale: 0.95;
+      }
+    }
+    &--phone {
+      font-size: rem(16);
+      font-style: normal;
+      text-decoration: none;
+    }
+  }
+}

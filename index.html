@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="icon" type="image/svg+xml" sizes="16x16" href="/images/icons/favicon.svg">
+	<link rel="icon" type="image/svg+xml" sizes="32x32" href="/images/icons/favicon.svg">
+	<link rel="icon" type="image/svg+xml" sizes="48x48" href="/images/icons/favicon.svg">
+	<link rel="apple-touch-icon" sizes="180x180" href="/images/icons/favicon.svg">
+	<!-- <meta name="description"
+		content="Add your page description ..."> -->
+	<!-- <link rel="stylesheet" href="libs/iziModal/iziModal.min.css"> -->
+	<!-- <link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css"> -->
+	<!-- <link rel="stylesheet" href="libs/bootstrap/bootstrap.min.css"> -->
+	<title>DAWINCHI</title>
+	<link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+	<header class="header">
+		<div class="header__inner container">
+			<a class="header__logo logo" href="index.html" aria-label="Логотип davinvchi" title="DAWINCHI">
+				<img class="logo__image" src="./images/logo/logo.svg" width="200" height="62" alt="Логотип davinvchi">
+			</a>
+
+			<nav class="header__nav menu hidden-tablet">
+				<ul class="menu__list">
+					<li class="menu__item">
+						<a href="#!" class="menu__link underline-effect">
+							Активности
+						</a>
+					</li>
+					<li class="menu__item">
+						<a href="#!" class="menu__link underline-effect">
+							Расположение
+						</a>
+					</li>
+					<li class="menu__item">
+						<a href="#!" class="menu__link underline-effect">
+							Запись
+						</a>
+					</li>
+					<li class="menu__item">
+						<a href="#!" class="menu__link underline-effect">
+							Цены
+						</a>
+					</li>
+					<li class="menu__item">
+						<a href="#!" class="menu__link underline-effect">
+							Акции
+						</a>
+					</li>
+					<li class="menu__item">
+						<a href="#!" class="menu__link underline-effect">
+							Корпоративы
+						</a>
+					</li>
+				</ul>
+			</nav>
+
+			<div class="header__soc1als soc1als">
+				<ul class="soc1als__list">
+					<li class="soc1als__item soc1als__item--phone-number hidden-tablet">
+						<address>
+							<a class="soc1als__link soc1als__link--phone" href="tel:80127756031" target="_blank">8 812 775-60-31</a>
+						</address>
+					</li>
+
+					<li class="soc1als__item visible-tablet">
+						<a class="soc1als__link" href="tel:80127756031" aria-label="Контактный телефон" target="_blank"
+							title="Контактный телефон">
+
+							<svg class="soc1als__icon" viewBox="0 0 40 40" width="40" height="40">
+								<use xlink:href="/images/icons/sprite-icons.svg#social-phone"></use>
+							</svg>
+
+						</a>
+					</li>
+
+					<li class="soc1als__item">
+						<a class="soc1als__link" href="https://m.vk.com/" aria-label="Вконтакте" target="_blank" title="Вконтакте">
+
+							<svg class="soc1als__icon" viewBox="0 0 40 40" width="40" height="40">
+								<use xlink:href="/images/icons/sprite-icons.svg#social-vk"></use>
+							</svg>
+
+						</a>
+					</li>
+
+					<li class="soc1als__item">
+						<a class="soc1als__link" href="https://telegram.org/" aria-label="Телеграм" target="_blank"
+							title="Телеграм">
+
+							<svg class="soc1als__icon" viewBox="0 0 40 40" width="40" height="40">
+								<use xlink:href="/images/icons/sprite-icons.svg#social-telegram"></use>
+							</svg>
+
+						</a>
+					</li>
+
+					<li class="soc1als__item">
+						<a class="soc1als__link" href="https://yandex.ru" aria-label="Яндекс" target="_blank" title="Яндекс">
+
+							<svg class="soc1als__icon" viewBox="0 0 40 40" width="40" height="40">
+								<use xlink:href="/images/icons/sprite-icons.svg#social-yandex"></use>
+							</svg>
+
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="mobile-menu visible-tablet">
+				<input id="menu-switch" type="checkbox">
+				<label class="mobile-menu__burger" for="menu-switch">
+					<span></span>
+				</label>
+				<div class="mobile-menu__wrapper">
+					<!-- <nav class="mobile-menu__box menu">
+						<ul class="menu__list">
+							<li class="menu__item">
+								<a href="#!" class="menu__link">
+									Активности
+								</a>
+							</li>
+							<li class="menu__item">
+								<a href="#!" class="menu__link">
+									Расположение
+								</a>
+							</li>
+							<li class="menu__item">
+								<a href="#!" class="menu__link">
+									Запись
+								</a>
+							</li>
+							<li class="menu__item">
+								<a href="#!" class="menu__link">
+									Цены
+								</a>
+							</li>
+							<li class="menu__item">
+								<a href="#!" class="menu__link">
+									Акции
+								</a>
+							</li>
+							<li class="menu__item">
+								<a href="#!" class="menu__link">
+									Корпоративы
+								</a>
+							</li>
+						</ul>
+					</nav> -->
+				</div>
+			</div>
+
+		</div>
+
+
+
+	</header>
+
+	<main class="content">
+		<section class="promo" aria-labelledby="site-title">
+			<h1 class="visually-hidden" id="site-title">DAWINCHI WAKE PARK</h1>
+
+			<picture class="promo__image-wrapper">
+				<source srcset="./images/promo/promo-bg.webp 1x , ./images/promo/promo-bg@2x.webp 2x" type="image/webp">
+				<img class="promo__image" src="./images/promo/promo-bg.webp" alt="Фото DAWINCHI WAKE PARK" width="1600"
+					height="949" loading="lazy">
+			</picture>
+			<div class="promo__body container">
+				<h2 class="promo__title h1">DAWINCHI WAKE PARK</h2>
+
+
+			</div>
+		</section>
+	</main>
+
+	<footer class="footer">
+		<div class="footer__inner">
+			<div class="footer__heading">
+				<svg class="footer__heading-background hidden-tablet" viewBox="0 0 1000 156" width="1000" height="156">
+					<use xlink:href="./images/icons/sprite-icons.svg#footer-bg"></use>
+				</svg>
+
+				<address class="footer__address">
+					<p class="footer__title">наш&nbsp;E-MAIL
+						<a class="underline-effect footer__link" href="mailto:@dw_wake" target="_blank">
+							@dw_wake
+						</a>
+					</p>
+				</address>
+
+				<div class="footer__subtitle">
+					<p>
+						Время работы с&nbsp;<time datetime="09:00+03:00">9:00</time>&nbsp;до&nbsp;<time
+							datetime="21:00+03:00">21:00</time>
+					</p>
+				</div>
+			</div>
+
+			<div class="footer__body  container">
+				<nav class="footer__nav hidden-mobile">
+					<ul class="footer__nav-list">
+						<li>
+							<a class="footer__nav-link underline-effect footer__link" href="#!">
+								Главная
+							</a>
+						</li>
+
+						<li>
+							<a class="footer__nav-link underline-effect footer__link" href="#!">
+								Расположение
+							</a>
+						</li>
+
+						<li>
+							<a class="footer__nav-link underline-effect footer__link" href="#!">
+								Запись
+							</a>
+						</li>
+
+						<li>
+							<a class="footer__nav-link underline-effect footer__link" href="#!">
+								Цены
+							</a>
+						</li>
+
+						<li>
+							<a class="footer__nav-link underline-effect footer__link" href="#!">
+								Акции
+							</a>
+						</li>
+
+						<li>
+							<a class="footer__nav-link underline-effect footer__link" href="#!">
+								корпоративы
+							</a>
+						</li>
+					</ul>
+				</nav>
+
+				<ul class="footer__privacy-policy-list">
+					<li>
+						<a class="footer__privacy-policy-link footer__link" href="#!" target="_blank">
+							Политика конфиденциальности
+						</a>
+					</li>
+					<li>
+						<a class="footer__privacy-policy-link footer__link" href="#!">
+							Снятие ответственности
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+	</footer>
+
+
+
+
+	<!-- <script src="libs/jquery/jquery-3.7.1.min.js"></script>  for accordion and modal-->
+	<!-- <script src="/libs/jquery/jquery-ui.1.14.0.min.js"></script> for accordion-->
+	<!-- <script src="libs/swiper/swiper-bundle.min.js"></script> -->
+	<!-- <script src="libs/iziModal/iziModal.min.js"></script> -->
+	<!-- <script src="libs/bootstrap/bootstrap.bundle.min.js"></script> -->
+	<script type="module" src="/js/main.js"></script>
+</body>
+
+</html>

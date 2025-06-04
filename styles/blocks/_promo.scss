@@ -1,0 +1,27 @@
+@use "../healpers" as *;
+
+.promo {
+  min-height: calc(rem(949) - var(--header-height));
+  .promo__image {
+    position: absolute;
+    top: calc(var(--header-height) * -1);
+    min-height: rem(700);
+    object-fit: cover;
+
+    &-wrapper {
+      position: relative;
+      z-index: -1;
+      display: block;
+      margin-inline: auto;
+      max-width: rem(1600);
+      filter: brightness(60%);
+    }
+  }
+
+  .promo__body {
+    text-align: center;
+  }
+
+  .promo__title {
+  }
+}

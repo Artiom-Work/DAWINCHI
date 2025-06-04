@@ -1,0 +1,64 @@
+@use "../healpers" as *;
+
+.container {
+  max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+  margin-inline: auto;
+  padding-inline: var(--container-padding-x);
+  outline: 1px solid red;
+}
+
+.visually-hidden {
+  @include visually-hidden;
+}
+
+.hidden-mobile {
+  @include mobile-media {
+    display: none !important;
+  }
+}
+.hidden-tablet {
+  @include tablet-media {
+    display: none !important;
+  }
+}
+
+.visible-mobile {
+  @include mobile-media-above {
+    display: none !important;
+  }
+}
+.visible-tablet {
+  @include tablet-media-above {
+    display: none !important;
+  }
+}
+
+.underline-effect {
+  position: relative;
+  transition-duration: var(--transition-duration);
+
+  @include hover {
+    &::after {
+      width: 100%;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    translate: -50%;
+    width: 0;
+    height: 2px;
+    background-color: currentColor;
+    transition-duration: inherit;
+  }
+}
+// .lock-body {
+//   overflow: hidden;
+// }
+// .hide-layer {
+//   position: relative;
+//   z-index: -1;
+// }

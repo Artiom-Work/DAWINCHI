@@ -1,0 +1,25 @@
+@use "../healpers" as *;
+
+.menu {
+  text-transform: uppercase;
+  &__list {
+    @include flex-center;
+
+    gap: rem(30);
+
+    @include laptop-media {
+      gap: rem(20);
+    }
+  }
+
+  &__item {
+  }
+
+  &__link {
+    @include fluid-text(18, 12);
+
+    @include hover {
+      color: var(--color-accent-light);
+    }
+  }
+}

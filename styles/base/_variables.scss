@@ -1,0 +1,46 @@
+@use "../healpers" as *;
+
+:root {
+  --color-light: #ffffff;
+  --color-dark: #000000;
+
+  --color-light-opacity: #ffffff8d;
+  --color-dark-opacity: #00000066;
+
+  --color-accent-dark: #0a59b1;
+  --color-accent: #3ca5fa;
+  --color-accent-medium: #48a0e9;
+  --color-accent-light: #70bfff;
+
+  --color-yellow: #fefd02;
+  --color-orange: #ffcc00;
+
+  --color-gray: #999999;
+
+  // --gradient: linear-gradient(
+  //   45deg,
+  //   var(--color-dark-15) 64%,
+  //   var(--color-accent) 136%
+  // );
+  --border: #{rem(1)} solid var(--color-blue-light);
+
+  --border-radius: #{rem(20)};
+
+  --font-family-base: "Montserrat", sans-serif;
+  --font-family-second: "Unbounded", sans-serif;
+  --font-family-third: "Inter", sans-serif;
+  --font-family-additional: "Roboto", sans-serif;
+
+  --container-width: #{rem(1300)};
+  --container-padding-x: #{rem(20)};
+  --header-height: #{rem(100)};
+
+  --transition-duration: 0.3s;
+
+  // @include laptop-media {
+  //   --container-width: #{rem(1280)};
+  // }
+  @include mobile-media {
+    --header-height: #{rem(60)};
+  }
+}

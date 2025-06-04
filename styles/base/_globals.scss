@@ -1,0 +1,104 @@
+@use "../healpers" as *;
+
+html {
+  &.is-lock {
+    overflow: hidden;
+  }
+}
+
+body {
+  @include fluid-text(18, 13);
+
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family-base);
+  line-height: 1.3;
+  color: var(--color-dark);
+  background-color: var(--color-light);
+}
+main {
+  flex-grow: 1;
+}
+//titles
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3 {
+  font-family: var(--font-family-second);
+}
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  font-weight: 600;
+  background: var(--color-dark-blue);
+}
+h1,
+.h1 {
+  @include fluid-text(85, 45);
+  line-height: 1.2;
+}
+h2,
+.h2 {
+  @include fluid-text(50, 30);
+}
+h3,
+.h3 {
+  @include fluid-text(25, 17);
+}
+h4,
+.h4 {
+  @include fluid-text(18, 14);
+}
+
+// for animation hover/active
+a,
+button,
+input,
+textarea,
+label,
+select,
+svg * {
+  transition-duration: var(--transition-duration);
+}
+// for links
+a {
+  color: inherit;
+
+  @include active {
+    filter: brightness(80%);
+  }
+  &[class] {
+    text-decoration: none;
+  }
+}
+// focus elements
+:focus {
+  // outline: rem(2) dashed var(--color-light);
+  outline-offset: rem(4);
+  transition-duration: 0s !important;
+}
+
+a,
+button {
+  &[aria-label] {
+    position: relative;
+
+    &::before {
+      @include abs-center;
+      @include square(rem(44));
+
+      content: "";
+    }
+  }
+}

@@ -8,11 +8,8 @@
     gap: rem(30);
 
     @include laptop-media {
-      gap: rem(20);
+      gap: rem(12);
     }
-  }
-
-  &__item {
   }
 
   &__link {
@@ -20,6 +17,33 @@
 
     @include hover {
       color: var(--color-accent-light);
+    }
+
+    &--image {
+      box-shadow: var(--image-bow-shadow-dark);
+
+      @include hover {
+        filter: brightness(90%);
+      }
+
+      @include active {
+        scale: 0.98;
+      }
+    }
+  }
+}
+//Styles for mobile menu
+@include tablet-media {
+  .menu {
+    &__list {
+      height: 100vh;
+      flex-direction: column;
+      justify-content: center;
+      gap: rem(30);
+    }
+
+    &__link {
+      font-size: rem(16);
     }
   }
 }

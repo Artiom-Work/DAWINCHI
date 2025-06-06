@@ -1,27 +1,65 @@
 @use "../healpers" as *;
 
 .promo {
-  min-height: calc(rem(949) - var(--header-height));
-  .promo__image {
-    position: absolute;
-    top: calc(var(--header-height) * -1);
-    min-height: rem(700);
+  --mainImageHeight: #{rem(1052)};
+
+  min-height: calc(var(--mainImageHeight) - (var(--header-height) * 2));
+  color: var(--color-light);
+
+  @include mobile-media {
+    --mainImageHeight: #{rem(760)};
+  }
+
+  &__image {
     object-fit: cover;
+    height: var(--mainImageHeight);
+    width: 100vw;
+
+    @media (max-width: 1640px) {
+      overflow: hidden;
+    }
+
+    @include mobile-s-media {
+      object-position: center var(--header-height);
+    }
 
     &-wrapper {
-      position: relative;
+      position: absolute;
       z-index: -1;
-      display: block;
-      margin-inline: auto;
-      max-width: rem(1600);
+      top: calc(var(--header-height) * -1);
       filter: brightness(60%);
     }
   }
 
-  .promo__body {
+  &__body {
+    min-height: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-block: fluid(115, 50) rem(50);
     text-align: center;
   }
 
-  .promo__title {
+  &__title {
+    margin-bottom: fluid(170, 155);
+    line-height: 1;
+    letter-spacing: 1.5;
+
+    @include laptop-media {
+      @include fluid-text(65, 45);
+    }
+  }
+
+  &__text {
+    @include fluid-text(18, 14);
+
+    max-width: fluid(365, 284);
+    text-transform: uppercase;
+    line-height: 1.8;
+    letter-spacing: 0.2;
+    &:not(:last-child) {
+      margin-bottom: rem(40);
+    }
   }
 }

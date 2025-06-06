@@ -15,7 +15,7 @@
 	<!-- <link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css"> -->
 	<!-- <link rel="stylesheet" href="libs/bootstrap/bootstrap.min.css"> -->
 	<title>DAWINCHI</title>
-	<link rel="stylesheet" href="styles/main.css">
+	<link rel="stylesheet" href="./styles/main.css">
 </head>
 
 <body>
@@ -27,32 +27,32 @@
 
 			<nav class="header__nav menu hidden-tablet">
 				<ul class="menu__list">
-					<li class="menu__item">
+					<li>
 						<a href="#!" class="menu__link underline-effect">
 							Активности
 						</a>
 					</li>
-					<li class="menu__item">
+					<li>
 						<a href="#!" class="menu__link underline-effect">
 							Расположение
 						</a>
 					</li>
-					<li class="menu__item">
+					<li>
 						<a href="#!" class="menu__link underline-effect">
 							Запись
 						</a>
 					</li>
-					<li class="menu__item">
+					<li>
 						<a href="#!" class="menu__link underline-effect">
 							Цены
 						</a>
 					</li>
-					<li class="menu__item">
+					<li>
 						<a href="#!" class="menu__link underline-effect">
 							Акции
 						</a>
 					</li>
-					<li class="menu__item">
+					<li>
 						<a href="#!" class="menu__link underline-effect">
 							Корпоративы
 						</a>
@@ -64,7 +64,8 @@
 				<ul class="soc1als__list">
 					<li class="soc1als__item soc1als__item--phone-number hidden-tablet">
 						<address>
-							<a class="soc1als__link soc1als__link--phone" href="tel:80127756031" target="_blank">8 812 775-60-31</a>
+							<a class="soc1als__link soc1als__link--phone" href="tel:80127756031" target="_blank"
+								title="Позвонить нам">8 812 775-60-31</a>
 						</address>
 					</li>
 
@@ -72,7 +73,7 @@
 						<a class="soc1als__link" href="tel:80127756031" aria-label="Контактный телефон" target="_blank"
 							title="Контактный телефон">
 
-							<svg class="soc1als__icon" viewBox="0 0 40 40" width="40" height="40">
+							<svg viewBox="0 0 40 40" width="40" height="40">
 								<use xlink:href="./images/icons/sprite-icons.svg#social-phone"></use>
 							</svg>
 
@@ -80,9 +81,10 @@
 					</li>
 
 					<li class="soc1als__item">
-						<a class="soc1als__link" href="https://m.vk.com/" aria-label="Вконтакте" target="_blank" title="Вконтакте">
+						<a class="soc1als__link" href="https://m.vk.com/" aria-label="Ссылка для перехода Вконтакте" target="_blank"
+							title="Написать в Вконтакте">
 
-							<svg class="soc1als__icon" viewBox="0 0 40 40" width="40" height="40">
+							<svg viewBox="0 0 40 40" width="40" height="40">
 								<use xlink:href="./images/icons/sprite-icons.svg#social-vk"></use>
 							</svg>
 
@@ -90,10 +92,22 @@
 					</li>
 
 					<li class="soc1als__item">
-						<a class="soc1als__link" href="https://telegram.org/" aria-label="Телеграм" target="_blank"
-							title="Телеграм">
+						<a class="soc1als__link"
+							href="https://www.instagram.com/dw_wake?igsh=MTY4b2lwMW1lOGRzaw%3D%3D&utm_source=qr"
+							aria-label="Инстаграм" target="_blank" title="Написать в инстаграм">
 
-							<svg class="soc1als__icon" viewBox="0 0 40 40" width="40" height="40">
+							<svg viewBox="0 0 40 40" width="40" height="40">
+								<use xlink:href="./images/icons/sprite-icons.svg#social-instagram"></use>
+							</svg>
+
+						</a>
+					</li>
+
+					<li class="soc1als__item">
+						<a class="soc1als__link" href="https://t.me/vsevbarak" aria-label="Ссылка для перехода в телеграм"
+							target="_blank" title="Написать в телеграм">
+
+							<svg viewBox="0 0 40 40" width="40" height="40">
 								<use xlink:href="./images/icons/sprite-icons.svg#social-telegram"></use>
 							</svg>
 
@@ -101,9 +115,10 @@
 					</li>
 
 					<li class="soc1als__item">
-						<a class="soc1als__link" href="https://yandex.ru" aria-label="Яндекс" target="_blank" title="Яндекс">
+						<a class="soc1als__link" href="https://yandex.ru" aria-label="Ссылка для перехода в Яндекс" target="_blank"
+							title="Яндекс">
 
-							<svg class="soc1als__icon" viewBox="0 0 40 40" width="40" height="40">
+							<svg viewBox="0 0 40 40" width="40" height="40">
 								<use xlink:href="./images/icons/sprite-icons.svg#social-yandex"></use>
 							</svg>
 
@@ -115,50 +130,59 @@
 			<div class="mobile-menu visible-tablet">
 				<input id="menu-switch" type="checkbox">
 				<label class="mobile-menu__burger" for="menu-switch">
-					<span></span>
+					<span class="mobile-menu__burger-line"></span>
+					<span class="mobile-menu__burger-line"></span>
+					<span class="mobile-menu__burger-line"></span>
 				</label>
+
 				<div class="mobile-menu__wrapper">
-					<!-- <nav class="mobile-menu__box menu">
+					<nav class="mobile-menu__box menu">
 						<ul class="menu__list">
-							<li class="menu__item">
-								<a href="#!" class="menu__link">
+							<li>
+								<a href="#!" class="menu__link underline-effect">
 									Активности
 								</a>
 							</li>
-							<li class="menu__item">
-								<a href="#!" class="menu__link">
+							<li>
+								<a href="#!" class="menu__link underline-effect">
 									Расположение
 								</a>
 							</li>
-							<li class="menu__item">
-								<a href="#!" class="menu__link">
+							<li>
+								<a href="#!" class="menu__link underline-effect">
 									Запись
 								</a>
 							</li>
-							<li class="menu__item">
-								<a href="#!" class="menu__link">
+							<li>
+								<a href="#!" class="menu__link underline-effect">
 									Цены
 								</a>
 							</li>
-							<li class="menu__item">
-								<a href="#!" class="menu__link">
+							<li>
+								<a href="#!" class="menu__link underline-effect">
 									Акции
 								</a>
 							</li>
-							<li class="menu__item">
-								<a href="#!" class="menu__link">
+							<li>
+								<a href="#!" class="menu__link underline-effect">
 									Корпоративы
 								</a>
 							</li>
+
+							<li>
+								<a href="https://www.instagram.com/dw_wake?igsh=MTY4b2lwMW1lOGRzaw%3D%3D&utm_source=qr"
+									class="menu__link menu__link--image" target="_blank" title="Перейти в instagram-канал"
+									aria-label="QR-код и ссыдлка для перехода в instagram-канал">
+									<img class="menu__link-image menu__link-image--instagram" src="./images/general/qr-instagram.webp"
+										srcset="./images/general/qr-instagram@2x.webp 2x" alt="QR-код инстаграмма DAWINCHI" width="180"
+										height="180" loading="lazy">
+								</a>
+							</li>
 						</ul>
-					</nav> -->
+					</nav>
 				</div>
 			</div>
-
 		</div>
-
-
-
 	</header>
 
 	<main class="content">
@@ -173,9 +197,79 @@
 			<div class="promo__body container">
 				<h2 class="promo__title h1">DAWINCHI WAKE PARK</h2>
 
+				<div class="promo__text">
+					<p>
+						Тренируйся,
+						отдыхай&nbsp;и&nbsp;наслаждайся водой.
+						Уникальные фигуры, профессиональные тренера, атмосфера свободы.
+					</p>
+				</div>
 
+				<button class="promo__button button button--text-big" type="button">Записаться</button>
+			</div>
+
+			<div class="promo__strip  promo-strip">
+				<ul class="promo-strip__list">
+					<li class="promo-strip__item">
+						<svg class="promo-strip__item-icon" width="50" height="50" viewBox="0 0 50 50">
+							<use xlink:href="./images/icons/sprite-icons.svg#promo-strip-star"></use>
+						</svg>
+					</li>
+					<li class="promo-strip__item promo-strip__item--text">
+						вейк бар
+					</li>
+					<li class="promo-strip__item">
+						<svg class="promo-strip__item-icon" width="50" height="50" viewBox="0 0 50 50">
+							<use xlink:href="./images/icons/sprite-icons.svg#promo-strip-star"></use>
+						</svg>
+					</li>
+					<li class="promo-strip__item promo-strip__item--text">
+						на&nbsp;территории парка
+					</li>
+					<li class="promo-strip__item">
+						<svg class="promo-strip__item-icon" width="50" height="50" viewBox="0 0 50 50">
+							<use xlink:href="./images/icons/sprite-icons.svg#promo-strip-star"></use>
+						</svg>
+					</li>
+					<li class="promo-strip__item promo-strip__item--text">
+						глэмпинг
+					</li>
+					<li class="promo-strip__item">
+						<svg class="promo-strip__item-icon" width="50" height="50" viewBox="0 0 50 50">
+							<use xlink:href="./images/icons/sprite-icons.svg#promo-strip-star"></use>
+						</svg>
+					</li>
+					<li class="promo-strip__item promo-strip__item--text">
+						osrov camp
+					</li>
+					<li class="promo-strip__item">
+						<svg class="promo-strip__item-icon" width="50" height="50" viewBox="0 0 50 50">
+							<use xlink:href="./images/icons/sprite-icons.svg#promo-strip-star"></use>
+						</svg>
+					</li>
+					<li class="promo-strip__item promo-strip__item--text">
+						баня
+					</li>
+					<li class="promo-strip__item">
+						<svg class="promo-strip__item-icon" width="50" height="50" viewBox="0 0 50 50">
+							<use xlink:href="./images/icons/sprite-icons.svg#promo-strip-star"></use>
+						</svg>
+					</li>
+					<li class="promo-strip__item promo-strip__item--text">
+						вейк бар
+					</li>
+					<li class="promo-strip__item">
+						<svg class="promo-strip__item-icon" width="50" height="50" viewBox="0 0 50 50">
+							<use xlink:href="./images/icons/sprite-icons.svg#promo-strip-star"></use>
+						</svg>
+					</li>
+					<li class="promo-strip__item promo-strip__item--text">
+						на&nbsp;территории парка
+					</li>
+				</ul>
 			</div>
 		</section>
+
 	</main>
 
 	<footer class="footer">
@@ -260,14 +354,21 @@
 	</footer>
 
 
-
+	<svg width="0" height="0">
+		<defs>
+			<clipPath id="button-background" clipPathUnits="objectBoundingBox">
+				<path
+					d="M0,0.315 C0,0.263 0.01,0.218 0.024,0.207 C0.364,-0.059 0.581,-0.079 0.976,0.208 C0.99,0.213 1,0.258 1,0.317 L1,0.672 C1,0.726 0.988,0.772 0.975,0.782 C0.603,1.006 0.387,0.993 0.025,0.781 C0.011,0.772 0,0.726 0,0.672 L0,0.315 Z" />
+			</clipPath>
+		</defs>
+	</svg>
 
 	<!-- <script src="libs/jquery/jquery-3.7.1.min.js"></script>  for accordion and modal-->
 	<!-- <script src="/libs/jquery/jquery-ui.1.14.0.min.js"></script> for accordion-->
 	<!-- <script src="libs/swiper/swiper-bundle.min.js"></script> -->
 	<!-- <script src="libs/iziModal/iziModal.min.js"></script> -->
 	<!-- <script src="libs/bootstrap/bootstrap.bundle.min.js"></script> -->
-	<script type="module" src="/js/main.js"></script>
+	<script type="module" src="./js/main.js"></script>
 </body>
 
 </html>

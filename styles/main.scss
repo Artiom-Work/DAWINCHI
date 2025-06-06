@@ -8,7 +8,7 @@
 //blocks
 // @use "./blocks/icon";
 // @use "./blocks/logo";
-// @use "./blocks/button";
+@use "./blocks/button";
 // @use "./blocks/burger-button";
 @use "./blocks/logo";
 @use "./blocks/menu";
@@ -16,4 +16,5 @@
 @use "./blocks/soc1als";
 @use "./blocks/header";
 @use "./blocks/promo";
+@use "./blocks/promo-strip";
 @use "./blocks/footer";

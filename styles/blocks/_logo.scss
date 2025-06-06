@@ -3,8 +3,13 @@
 .logo {
   width: fluid(200, 95);
   height: fluid(62, 29);
+
   transition-duration: var(--transition-duration);
 
+  @include laptop-media {
+    width: fluid(150, 95);
+    height: fluid(50, 29);
+  }
   @include hover {
     filter: invert(1) sepia(0.5) hue-rotate(190deg) saturate(2.5)
       brightness(80%);

@@ -54,10 +54,12 @@
     transition-duration: inherit;
   }
 }
-// .lock-body {
-//   overflow: hidden;
-// }
-// .hide-layer {
-//   position: relative;
-//   z-index: -1;
-// }
+.lock-body {
+  overflow: hidden;
+}
+.hide-layer {
+  z-index: -1;
+}
+.blur-layer {
+  filter: blur(rem(12));
+}

@@ -1,8 +1,10 @@
 @use "../healpers" as *;
+
 .soc1als {
   @include tablet-media-above {
     align-self: flex-end;
   }
+
   &__list {
     display: flex;
     align-items: center;
@@ -11,7 +13,7 @@
     @include tablet-media-above {
       display: grid;
       grid-template-rows: 1fr auto;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
     }
   }
 
@@ -29,7 +31,7 @@
   &__item--phone-number {
     width: 100%;
     height: auto;
-    grid-column: 1 / 4;
+    grid-column: 1 / 5;
     justify-items: end;
   }
 
@@ -38,22 +40,27 @@
     height: inherit;
     transition-duration: var(--transition-duration);
 
+    @include tablet-media {
+      @include flex-center(true);
+    }
+
     @include hover {
       &:not(.soc1als__link--phone) {
         filter: brightness(80%);
       }
+
       &.soc1als__link--phone {
         color: var(--color-accent-light);
       }
-      &__icon {
-      }
     }
+
     @include active {
       &:not(.soc1als__link--phone) {
         filter: brightness(60%);
         scale: 0.95;
       }
     }
+
     &--phone {
       font-size: rem(16);
       font-style: normal;

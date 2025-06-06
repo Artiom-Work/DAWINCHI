@@ -1,29 +1,63 @@
+@use "../healpers" as *;
+
 .button {
-  // @include flex-center(true);
+  @include flex-center(true);
+  @include fluid-text(30, 14);
 
-  // height: var(--button-height);
-  // padding-inline: 35px;
-  // font-size: 20px;
-  // color: var(--color-light);
-  // background-color: var(--color-dark);
-  // border: var(--border);
-  // border-radius: var(--border-radius);
+  height: fluid(80, 60);
+  padding-inline: fluid(34, 22);
+  font-weight: 500;
+  font-family: var(--font-family-second);
+  text-transform: uppercase;
+  background: var(--color-yellow);
 
-  // @include hover {
-  //   background-color: var(--color-accent);
-  //   color: var(--color-dark);
-  // }
-  // &--transparent {
-  //   color: var(--color-dark);
-  //   background-color: transparent;
-  // }
-  // &--accent {
-  //   background-color: var(--color-accent);
-  //   color: var(--color-dark);
+  clip-path: url(#button-background);
+  color: var(--color-dark);
+  border: none;
 
-  //   @include hover {
-  //     background-color: var(--color-dark);
-  //     color: var(--color-accent);
-  //   }
-  // }
+  @include hover {
+    background-color: var(--color-accent);
+    color: var(--color-light);
+  }
+
+  @include active {
+    scale: 0.98;
+    filter: brightness(90%);
+  }
+
+  &--big {
+    @include fluid-text(25, 14);
+
+    height: fluid(110, 60);
+    padding-inline: fluid(210, 99);
+  }
+
+  &--small {
+    @include fluid-text(25, 14);
+
+    height: fluid(80, 35);
+    padding-inline: fluid(210, 99);
+  }
+
+  &--text-big {
+    @include fluid-text(30, 20);
+
+    font-weight: 600;
+  }
+
+  &--text-small {
+    @include fluid-text(25, 14);
+  }
+
+  &--blue {
+    @include fluid-text(25, 14);
+
+    background: var(--color-accent-medium);
+    color: var(--color-light);
+
+    @include hover {
+      background-color: var(--color-yellow);
+      color: var(--color-dark);
+    }
+  }
 }

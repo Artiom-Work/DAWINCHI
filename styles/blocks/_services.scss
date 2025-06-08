@@ -1,0 +1,84 @@
+@use "../healpers" as *;
+
+.services {
+  padding-block: var(--sectionPadding);
+
+  &__title {
+    margin-block: 0 fluid(67, 17);
+  }
+
+  &__body {
+    height: rem(418);
+    position: relative;
+
+    @include mobile-media-above {
+      min-height: rem(1050);
+    }
+  }
+}
+
+.services__slider {
+  height: rem(348);
+  margin-bottom: rem(20);
+
+  @include mobile-media-above {
+    height: rem(917);
+    margin-bottom: unset;
+  }
+
+  &-wrapper {
+    position: relative;
+
+    @include mobile-media-above {
+      .swiper-slide.service:nth-child(2n) {
+        justify-items: end;
+      }
+    }
+
+    @include laptop-media-above {
+      .swiper-slide.service:nth-child(2n) .service__card {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+
+  &-button {
+    position: absolute;
+    left: 100%;
+    translate: -100%;
+
+    margin-top: rem(33);
+    background-color: var(--color-accent-dark);
+    font-size: rem(18);
+    font-family: var(--fonnt-family-base);
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+    transition-duration: var(--transition-duration);
+
+    @include hover {
+      background-color: var(--color-accent);
+    }
+    @include active {
+      filter: brightness(80%);
+      scale: 0.95;
+    }
+    &::after {
+      display: block;
+      position: absolute;
+      content: "";
+      left: 50%;
+      bottom: 0;
+      width: rem(1);
+      height: 300%;
+      z-index: -1;
+      background-color: inherit;
+    }
+
+    @include laptop-media-above {
+      left: 50%;
+      translate: -50%;
+    }
+  }
+}

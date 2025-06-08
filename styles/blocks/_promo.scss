@@ -1,7 +1,7 @@
 @use "../healpers" as *;
 
 .promo {
-  --mainImageHeight: #{rem(1052)};
+  --mainImageHeight: #{rem(1050)};
 
   min-height: calc(var(--mainImageHeight) - (var(--header-height) * 2));
   color: var(--color-light);
@@ -57,9 +57,9 @@
     max-width: fluid(365, 284);
     text-transform: uppercase;
     line-height: 1.8;
-    letter-spacing: 0.2;
+
     &:not(:last-child) {
-      margin-bottom: rem(40);
+      margin-bottom: rem(33);
     }
   }
 }

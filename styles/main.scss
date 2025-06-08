@@ -17,4 +17,10 @@
 @use "./blocks/header";
 @use "./blocks/promo";
 @use "./blocks/promo-strip";
+@use "./blocks/section";
+//slider services
+@use "./blocks/services";
+@use "./blocks/services-pagination";
+@use "./blocks/service";
+//=========//
 @use "./blocks/footer";

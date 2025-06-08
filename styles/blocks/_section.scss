@@ -1,28 +1,15 @@
+@use "../healpers" as *;
+
 .section {
-  // padding-block: var(--container-padding-y);
+  padding-top: var(--sectionPadding);
 
-  // &--hidden-x {
-  //   overflow-x: hidden;
-  // }
-  // &__header {
-  //   display: flex;
-  //   align-items: center;
-  //   column-gap: 40px;
+  &__title {
+    color: var(--color-accent-dark);
+    text-align: center;
+    text-transform: uppercase;
 
-  //   @include mobile-media {
-  //     flex-direction: column;
-  //     row-gap: 30px;
-  //     text-align: center;
-  //   }
-
-  //   &:not(:last-child) {
-  //     margin-bottom: 80px;
-  //     @include mobile-media {
-  //       margin-bottom: 40px;
-  //     }
-  //   }
-  // }
-  // &__description {
-  //   max-width: 588px;
-  // }
+    @include mobile-media {
+      text-align: start;
+    }
+  }
 }

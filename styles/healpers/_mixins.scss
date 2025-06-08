@@ -82,3 +82,16 @@
   background-color: transparent;
   border: none;
 }
+
+@mixin step-circle {
+  @include square(#{rem(100)});
+  @include flex-center(true);
+
+  font-family: var(--font-family-second);
+  font-size: rem(40);
+  color: var(--color-light);
+  border-radius: 50%;
+}
+// @mixin step-circle-line{
+
+// }

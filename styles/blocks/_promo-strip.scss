@@ -29,6 +29,7 @@
   }
 }
 .promo-strip__item {
+  display: inline-flex;
   &-icon {
     fill: var(--color-light);
 

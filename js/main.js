@@ -1,9 +1,9 @@
 'use strict';
+
 const menuSwitcher = document.getElementById('menu-switch');
 const mobileMenu = document.querySelector('.mobile-menu__wrapper');
 const pageContent = document.querySelector('.content');
 const pageFooter = document.querySelector('.footer');
-// const linkToMobileMenu = document.querySelector('.link-to-mobile-menu'); 
 //for mobile menu
 
 menuSwitcher.addEventListener('change', (e) => {
@@ -15,12 +15,7 @@ menuSwitcher.addEventListener('change', (e) => {
 		menuSwitcher.labels[0].title = 'mobile menu';
 	}
 });
-// linkToMobileMenu.addEventListener('click', (e) => {
-// 	if (mediaQueryMobile.matches) {
-// 		menuSwitcher.checked = true;
-// 		bodyLock();
-// 	}
-// });
+
 mobileMenu.addEventListener('click', (e) => {
 	menuSwitcher.checked = false;
 	bodyUnlock();
@@ -41,3 +36,6 @@ function bodyUnlock() {
 	pageFooter.classList.remove('hide-layer');
 	pageContent.classList.remove('blur-layer');
 }
+
+
+

@@ -63,3 +63,11 @@
 .blur-layer {
   filter: blur(rem(12));
 }
+.step-circle {
+  @include step-circle;
+  @include mobile-media {
+    @include square(#{rem(50)});
+
+    font-size: rem(22);
+  }
+}

@@ -1,0 +1,40 @@
+@use "../healpers" as *;
+.gallery {
+}
+
+.swiper {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+.gallery-slider {
+  position: relative;
+
+  &__slide {
+  }
+  &__image {
+    width: 100%;
+    height: rem(650);
+    object-fit: cover;
+  }
+  &__pagination {
+    position: absolute;
+    left: 50% !important;
+    translate: -50%;
+    bottom: rem(50) !important;
+    z-index: 3;
+    width: unset !important;
+
+    .swiper-pagination-bullet {
+      opacity: 1;
+      border: var(--border-white);
+      background-color: transparent;
+      width: rem(10);
+
+      &-active {
+        background-color: var(--color-light);
+      }
+    }
+  }
+}

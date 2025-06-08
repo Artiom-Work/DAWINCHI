@@ -111,63 +111,63 @@ svg * {
 }
 @font-face {
   font-family: "Montserrat";
-  src: url("../../fonts/Montserrat-Regular.woff2") format("woff2");
+  src: url("../fonts/Montserrat-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Montserrat";
-  src: url("../../fonts/Montserrat-Medium.woff2") format("woff2");
+  src: url("../fonts/Montserrat-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Montserrat";
-  src: url("../../fonts/Montserrat-SemiBold.woff2") format("woff2");
+  src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Unbounded";
-  src: url("../../fonts/Unbounded-Regular.woff2") format("woff2");
+  src: url("../fonts/Unbounded-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Unbounded";
-  src: url("../../fonts/Unbounded-Medium.woff2") format("woff2");
+  src: url("../fonts/Unbounded-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Unbounded";
-  src: url("../../fonts/Unbounded-SemiBold.woff2") format("woff2");
+  src: url("../fonts/Unbounded-SemiBold.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Unbounded";
-  src: url("../../fonts/Unbounded-ExtraBold.woff2") format("woff2");
+  src: url("../fonts/Unbounded-ExtraBold.woff2") format("woff2");
   font-weight: 800;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Inter";
-  src: url("../../fonts/Roboto-Regular.woff2") format("woff2");
+  src: url("../fonts/Roboto-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Roboto";
-  src: url("../../fonts/Roboto-Regular.woff2") format("woff2");
+  src: url("../fonts/Roboto-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -190,6 +190,7 @@ svg * {
   --color-gray-light: #cecece;
   --image-bow-shadow-dark: 0px 3px 14px 0px rgba(0, 0, 0, 0.25);
   --border: 0.0625rem solid var(--color-blue-light);
+  --border-white: 0.0625rem solid var(--color-light);
   --border-radius-small: 0.625rem;
   --border-radius: 1.25rem;
   --font-family-base: "Montserrat", sans-serif;
@@ -1190,6 +1191,32 @@ button[aria-label]::before {
   position: relative;
   top: 0.1875rem;
   transition-duration: var(--transition-duration);
+}
+
+.gallery-slider {
+  position: relative;
+}
+.gallery-slider__image {
+  width: 100%;
+  height: 40.625rem;
+  object-fit: cover;
+}
+.gallery-slider__pagination {
+  position: absolute;
+  left: 50% !important;
+  translate: -50%;
+  bottom: 3.125rem !important;
+  z-index: 3;
+  width: unset !important;
+}
+.gallery-slider__pagination .swiper-pagination-bullet {
+  opacity: 1;
+  border: var(--border-white);
+  background-color: transparent;
+  width: 0.625rem;
+}
+.gallery-slider__pagination .swiper-pagination-bullet-active {
+  background-color: var(--color-light);
 }
 
 .footer {

@@ -1196,16 +1196,26 @@ button[aria-label]::before {
 .gallery-slider {
   position: relative;
 }
+@media (width <= 81.31125rem) {
+  .gallery-slider {
+    height: clamp(18.75rem, 9.375rem + 38.4615384615vw, 40.625rem);
+  }
+}
 .gallery-slider__image {
   width: 100%;
   height: 40.625rem;
   object-fit: cover;
 }
+@media (width <= 81.31125rem) {
+  .gallery-slider__image {
+    height: 100%;
+  }
+}
 .gallery-slider__pagination {
   position: absolute;
   left: 50% !important;
   translate: -50%;
-  bottom: 3.125rem !important;
+  bottom: clamp(1.25rem, 0.4464285714rem + 3.2967032967vw, 3.125rem) !important;
   z-index: 3;
   width: unset !important;
 }

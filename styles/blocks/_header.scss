@@ -1,19 +1,19 @@
 @use "../healpers" as *;
 
 .header {
-  // position: sticky;
-  // top: 0;
-  // z-index: 100;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 
   color: var(--color-light);
   font-weight: 600;
   backdrop-filter: blur(4px);
   background-color: var(--color-light-opacity-10);
 
-  // animation-name: scrolling-header;
-  // animation-fill-mode: both;
-  // animation-timeline: scroll();
-  // animation-range: rem(100) rem(200);
+  animation-name: scrolling-header;
+  animation-fill-mode: both;
+  animation-timeline: scroll();
+  animation-range: rem(100) rem(200);
 
   .header__inner {
     @include flex-space-between;

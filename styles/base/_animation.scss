@@ -1,10 +1,11 @@
 @use "../healpers" as *;
 
-// @keyframes scrolling-header {
-//   to {
-//     box-shadow: 0 0 1rem 2rem var(--color-light-opacity);
-//   }
-// }
+@keyframes scrolling-header {
+  to {
+    box-shadow: 0 0 10rem 1rem var(--color-accent-dark-opacity);
+    background-color: var(--color-accent-dark-opacity);
+  }
+}
 
 @keyframes openAnimation {
   0% {

@@ -10,6 +10,37 @@
   margin-inline: auto;
   overflow: hidden;
 
+  &::before,
+  &::after {
+    position: absolute;
+    z-index: 0;
+    content: "";
+    height: 60%;
+    width: var(--container-padding-x);
+
+    @include laptop-media {
+      display: none;
+    }
+  }
+  &::before {
+    background: linear-gradient(
+      90deg,
+      var(--color-light-opacity-90) 0%,
+      var(--color-light-opacity-10) 100%
+    );
+    left: 0;
+    top: var(--sectionPadding);
+  }
+  &::after {
+    background: linear-gradient(
+      90deg,
+      var(--color-light-opacity-10) 0%,
+      var(--color-light-opacity-90) 100%
+    );
+
+    top: var(--sectionPadding);
+    right: 0;
+  }
   @include mobile-media {
     min-height: var(--sectionMobileHeight);
   }
@@ -25,6 +56,7 @@
     gap: fluid(20, 15);
 
     min-height: var(--locationBodyHeight);
+    margin-bottom: fluid(66, 20);
 
     @include mobile-media {
       flex-direction: column;
@@ -128,6 +160,12 @@
         height: rem(340);
       }
     }
+  }
+
+  &__button {
+    position: relative;
+    left: 50%;
+    translate: -50%;
   }
 
   // Only position of backgroun lines , only mobile

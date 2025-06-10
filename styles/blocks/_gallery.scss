@@ -4,7 +4,7 @@
   position: relative;
 
   @include laptop-media {
-    height: fluid(650, 300);
+    height: fluid(650, 360);
   }
 
   &__image {
@@ -21,7 +21,7 @@
     position: absolute;
     left: 50% !important;
     translate: -50%;
-    bottom: fluid(50, 20) !important;
+    bottom: fluid(50, 17) !important;
     z-index: 3;
     width: unset !important;
 
@@ -30,9 +30,24 @@
       border: var(--border-white);
       background-color: transparent;
       width: rem(10);
+      height: rem(10);
 
+      &:not(:last-child) {
+        margin-right: rem(30);
+      }
       &-active {
         background-color: var(--color-light);
+      }
+
+      & {
+        position: relative;
+
+        &::before {
+          @include abs-center;
+          @include square(rem(44));
+
+          content: "";
+        }
       }
     }
   }

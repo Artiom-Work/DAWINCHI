@@ -1,0 +1,38 @@
+@use "../healpers" as *;
+
+.location-strip {
+  --locationStripBgHeight: #{rem(633)};
+
+  position: absolute;
+  width: 100%;
+  height: var(--locationStripBgHeight);
+  color: var(--color-accent);
+
+  &__svg {
+    position: absolute;
+    top: 0;
+    left: -20%;
+    width: 140%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  &__text {
+    font-family: var(--font-family-base);
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    fill: var(--color-light);
+
+    &--star {
+      font-size: 44px;
+      text-shadow: var(--text-shadow-svg);
+
+      &-accent {
+        textPath {
+          fill: var(--color-accent-dark);
+        }
+      }
+    }
+  }
+}

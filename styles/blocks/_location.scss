@@ -1,0 +1,177 @@
+@use "../healpers" as *;
+
+.location {
+  --locationBodyHeight: #{rem(500)};
+  --sectionMobileHeight: #{rem(884)};
+
+  padding-bottom: var(--sectionPadding);
+  position: relative;
+  max-width: rem(1600);
+  margin-inline: auto;
+  overflow: hidden;
+
+  @include mobile-media {
+    min-height: var(--sectionMobileHeight);
+  }
+  &__title {
+    margin-bottom: fluid(66, 20);
+    padding-inline: var(--container-padding-x);
+  }
+
+  &__body {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: fluid(20, 15);
+
+    min-height: var(--locationBodyHeight); // on time
+
+    @include mobile-media {
+      flex-direction: column;
+    }
+  }
+
+  &__info {
+    position: relative;
+    height: var(--locationBodyHeight);
+    width: 100%;
+
+    @include mobile-media {
+      height: unset;
+    }
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: rem(1);
+      height: 100%;
+      background-color: var(--color-accent-dark);
+
+      @include laptop-media {
+        display: none;
+      }
+    }
+    &::after {
+      right: 0;
+    }
+
+    &-title {
+      color: var(--color-accent-dark);
+      text-transform: uppercase;
+      margin-bottom: fluid(34, 16);
+
+      @include mobile-media {
+        text-transform: unset;
+      }
+    }
+
+    &-list {
+      margin-inline: auto;
+      max-width: rem(513);
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: fluid(25, 15);
+
+      @include mobile-media {
+        max-width: 100%;
+      }
+    }
+
+    &-card {
+      width: 100%;
+      min-height: rem(199);
+      padding-block: fluid(22, 10) fluid(25, 15);
+      padding-inline: fluid(40, 15);
+      border: var(--border);
+      border-radius: var(--border-radius);
+      background: var(--color-light-opacity-90);
+      backdrop-filter: blur(4px);
+      text-align: center;
+
+      @include mobile-media {
+        text-align: start;
+        min-height: rem(133);
+      }
+    }
+
+    &-card-name {
+      margin-bottom: fluid(8, 5);
+      color: var(--color-accent-dark);
+      text-transform: uppercase;
+
+      @include mobile-media {
+        font-family: rem(14);
+      }
+    }
+  }
+
+  &__map {
+    max-width: rem(640);
+    width: 100%;
+
+    @include mobile-media {
+      max-width: 100%;
+    }
+    &-iframe {
+      max-width: rem(640);
+      width: 100%;
+      height: var(--locationBodyHeight);
+      border: none;
+      border-radius: var(--border-radius-medium);
+
+      @include mobile-media {
+        max-width: 100%;
+        height: rem(340);
+      }
+    }
+  }
+
+  // Only position of backgroun lines , only mobile
+  &__strip {
+    width: 100%;
+    position: relative;
+    z-index: -1;
+
+    .strip__item--text {
+      color: var(--color-light);
+    }
+
+    &-mobile {
+      position: absolute;
+      left: -20%;
+      top: 0;
+      min-height: inherit;
+      width: rem(967);
+    }
+    // lines position
+    &--top,
+    &--middle,
+    &--bottom {
+      position: absolute;
+      width: 100%;
+    }
+
+    &--top {
+      top: 22%;
+    }
+
+    &--middle {
+      top: 42.5%;
+    }
+
+    &--bottom {
+      bottom: 21%;
+    }
+
+    &--rotate-to-bottom {
+      transform: rotate(3.5deg);
+    }
+
+    &--rotate-to-top {
+      transform: rotate(-14.5deg);
+    }
+  }
+}

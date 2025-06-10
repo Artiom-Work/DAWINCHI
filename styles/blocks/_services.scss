@@ -30,13 +30,13 @@
     position: relative;
 
     @include mobile-media-above {
-      .swiper-slide.service:nth-child(2n) {
+      .swiper-slide.service:nth-child(even) {
         justify-items: end;
       }
     }
 
     @include laptop-media-above {
-      .swiper-slide.service:nth-child(2n) .service__card {
+      .swiper-slide.service:nth-child(even) .service__card {
         flex-direction: row-reverse;
       }
     }

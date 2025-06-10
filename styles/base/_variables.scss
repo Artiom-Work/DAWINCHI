@@ -2,7 +2,8 @@
 
 :root {
   --color-light: #ffffff;
-  --color-light-opacity-10: rgba(255, 255, 255, 0.202);
+  --color-light-opacity-10: #ffffff34;
+  --color-light-opacity-90: #ffffffe6;
   --color-dark: #000000;
 
   --color-light-opacity: #ffffff8d;
@@ -24,11 +25,15 @@
 
   --image-bow-shadow-dark: 0px 3px 14px 0px rgba(0, 0, 0, 0.25);
 
-  --border: #{rem(1)} solid var(--color-blue-light);
+  --text-shadow-svg: 1px 1px 2px rgba(0, 0, 0, 0.5);
+
+  --border: #{rem(1)} solid var(--color-accent-light);
   --border-white: #{rem(1)} solid var(--color-light);
 
   --border-radius-small: #{rem(10)};
   --border-radius: #{rem(20)};
+  --border-radius-medium: #{rem(25)};
+  --border-radius-large: #{rem(50)};
 
   --font-family-base: "Montserrat", sans-serif;
   --font-family-second: "Unbounded", sans-serif;
@@ -39,12 +44,11 @@
   --container-padding-x: #{rem(20)};
   --header-height: #{rem(100)};
   --promo-strip-height: #{rem(60)};
-  --sectionPadding: #{fluid(150, 50)};
+  --sectionPadding: #{fluid(150, 49)};
 
   --transition-duration: 0.3s;
 
   @include mobile-media {
     --header-height: #{rem(60)};
-    --promo-strip-height: #{rem(50)};
   }
 }

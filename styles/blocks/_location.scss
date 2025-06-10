@@ -24,7 +24,7 @@
     align-items: start;
     gap: fluid(20, 15);
 
-    min-height: var(--locationBodyHeight); // on time
+    min-height: var(--locationBodyHeight);
 
     @include mobile-media {
       flex-direction: column;
@@ -60,8 +60,10 @@
       color: var(--color-accent-dark);
       text-transform: uppercase;
       margin-bottom: fluid(34, 16);
+      text-align: center;
 
       @include mobile-media {
+        text-align: start;
         text-transform: unset;
       }
     }
@@ -89,7 +91,6 @@
       border-radius: var(--border-radius);
       background: var(--color-light-opacity-90);
       backdrop-filter: blur(4px);
-      text-align: center;
 
       @include mobile-media {
         text-align: start;

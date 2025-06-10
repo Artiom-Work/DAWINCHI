@@ -60,4 +60,22 @@
       color: var(--color-dark);
     }
   }
+
+  &--navigator {
+    @include fluid-text(22, 14);
+
+    height: fluid(70, 44);
+    padding-inline: fluid(24, 12) fluid(34, 22);
+    text-transform: none;
+  }
+
+  &__icon {
+    margin-right: rem(10);
+    width: fluid(35, 20);
+    height: fluid(35, 20);
+
+    &--navigator {
+      fill: red;
+    }
+  }
 }

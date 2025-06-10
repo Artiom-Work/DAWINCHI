@@ -185,7 +185,7 @@ svg * {
   --color-accent-light: #70bfff;
   --color-accent-opacity: #0a58b1bf;
   --color-accent-dark-opacity: #0a58b1a6;
-  --color-yellow: #fefd02;
+  --color-yellow: rgba(242, 242, 15, 0.9);
   --color-orange: #ffcc00;
   --color-gray-dark: #999999;
   --color-gray: #adacac;
@@ -556,6 +556,20 @@ button[aria-label]::before {
     background-color: var(--color-yellow);
     color: var(--color-dark);
   }
+}
+.button--navigator {
+  font-size: clamp(0.875rem, 0.6607142857rem + 0.8791208791vw, 1.375rem);
+  height: clamp(2.75rem, 2.0535714286rem + 2.8571428571vw, 4.375rem);
+  padding-inline: clamp(0.75rem, 0.4285714286rem + 1.3186813187vw, 1.5rem) clamp(1.375rem, 1.0535714286rem + 1.3186813187vw, 2.125rem);
+  text-transform: none;
+}
+.button__icon {
+  margin-right: 0.625rem;
+  width: clamp(1.25rem, 0.8482142857rem + 1.6483516484vw, 2.1875rem);
+  height: clamp(1.25rem, 0.8482142857rem + 1.6483516484vw, 2.1875rem);
+}
+.button__icon--navigator {
+  fill: red;
 }
 
 .logo {

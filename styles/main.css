@@ -333,6 +333,16 @@ main {
   flex-grow: 1;
 }
 
+.accent-background-zone {
+  background-color: var(--color-accent-light);
+  border-radius: var(--border-radius-large);
+}
+@media (width <= 47.99875rem) {
+  .accent-background-zone {
+    border-radius: var(--border-radius);
+  }
+}
+
 h1,
 .h1,
 h2,
@@ -502,6 +512,7 @@ button[aria-label]::before {
   font-weight: 500;
   font-family: var(--font-family-second);
   text-transform: uppercase;
+  text-align: center;
   background: var(--color-yellow);
   clip-path: url(#button-background);
   color: var(--color-dark);
@@ -526,7 +537,6 @@ button[aria-label]::before {
 .button--big {
   font-size: clamp(0.875rem, 0.5803571429rem + 1.2087912088vw, 1.5625rem);
   height: clamp(3.75rem, 2.4107142857rem + 5.4945054945vw, 6.875rem);
-  padding-inline: clamp(6.1875rem, 3.2142857143rem + 12.1978021978vw, 13.125rem);
 }
 .button--small {
   font-size: clamp(0.875rem, 0.5803571429rem + 1.2087912088vw, 1.5625rem);
@@ -627,6 +637,9 @@ button[aria-label]::before {
   .menu__link:active {
     color: var(--color-accent-light);
   }
+}
+.menu__link:active {
+  scale: 0.98;
 }
 .menu__link--image {
   box-shadow: var(--image-bow-shadow-dark);
@@ -1540,6 +1553,127 @@ button[aria-label]::before {
 }
 .location-strip__text--star-accent textPath {
   fill: var(--color-accent-dark);
+}
+
+.start {
+  padding-bottom: var(--sectionPadding);
+}
+.start__title {
+  margin-bottom: clamp(1.25rem, 0.1785714286rem + 4.3956043956vw, 3.75rem);
+  text-align: center;
+}
+@media (width <= 30.06125rem) {
+  .start__title {
+    text-align: start;
+  }
+}
+.start__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: clamp(1.25rem, -0.0892857143rem + 5.4945054945vw, 4.375rem);
+}
+@media (width <= 47.99875rem) {
+  .start__info {
+    flex-direction: column;
+  }
+}
+@media (width <= 30.06125rem) {
+  .start__info {
+    align-items: start;
+  }
+}
+.start__info-weather {
+  max-width: 100% !important;
+}
+.start__info-weather .lgFavo {
+  max-width: clamp(20rem, 11.4285714286rem + 35.1648351648vw, 40rem) !important;
+}
+@media (width <= 63.99875rem) {
+  .start__info-weather .lgFavo {
+    max-width: clamp(20rem, 14.9107142857rem + 20.8791208791vw, 31.875rem) !important;
+  }
+}
+@media (width <= 47.99875rem) {
+  .start__info-weather .lgFavo {
+    max-width: 100% !important;
+  }
+}
+.start__info-weather .fNdNyi {
+  min-height: 18.75rem !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: var(--border-radius) !important;
+}
+@media (width <= 47.99875rem) {
+  .start__info-weather .fNdNyi {
+    min-height: 9.25rem !important;
+  }
+}
+.start__info-weather .eapps-widget-toolbar {
+  display: none;
+}
+@media (width <= 47.99875rem) {
+  .start__info-buttons {
+    max-width: 20rem;
+  }
+}
+.start__info-button {
+  width: 100%;
+  padding-inline: 4.375rem;
+}
+.start__info-button:not(:last-child) {
+  margin-bottom: clamp(0.625rem, -0.4464285714rem + 4.3956043956vw, 3.125rem);
+}
+@media (width <= 63.99875rem) {
+  .start__info-button {
+    padding-inline: 2.1875rem;
+  }
+}
+.start__soc1al {
+  text-align: center;
+  font-size: 1.125rem;
+}
+@media (width <= 47.99875rem) {
+  .start__soc1al {
+    font-size: 1.0625rem;
+  }
+}
+@media (width <= 30.06125rem) {
+  .start__soc1al {
+    text-align: start;
+  }
+}
+.start__soc1al-heading {
+  text-transform: uppercase;
+  color: var(--color-accent-dark);
+  margin-bottom: clamp(0.3125rem, 0.1785714286rem + 0.5494505495vw, 0.625rem);
+  font-size: 1.125rem;
+}
+@media (width <= 47.99875rem) {
+  .start__soc1al-heading {
+    font-size: 1.0625rem;
+  }
+}
+.start__soc1al-link {
+  color: var(--color-light);
+  transition-duration: var(--transition-duration);
+}
+@media (any-hover: hover) {
+  .start__soc1al-link:hover {
+    color: var(--color-accent-dark);
+  }
+}
+@media (any-hover: hover) and (any-hover: none) {
+  .start__soc1al-link:active {
+    color: var(--color-accent-dark);
+  }
+}
+.start__soc1al-link:active {
+  color: var(--color-accent-medium);
+  scale: 0.98;
 }
 
 .footer {

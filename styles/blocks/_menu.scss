@@ -19,6 +19,9 @@
       color: var(--color-accent-light);
     }
 
+    @include active {
+      scale: 0.98;
+    }
     &--image {
       box-shadow: var(--image-bow-shadow-dark);
 

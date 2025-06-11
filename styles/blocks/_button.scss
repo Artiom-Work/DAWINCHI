@@ -9,6 +9,7 @@
   font-weight: 500;
   font-family: var(--font-family-second);
   text-transform: uppercase;
+  text-align: center;
   background: var(--color-yellow);
 
   clip-path: url(#button-background);
@@ -29,7 +30,6 @@
     @include fluid-text(25, 14);
 
     height: fluid(110, 60);
-    padding-inline: fluid(210, 99);
   }
 
   &--small {

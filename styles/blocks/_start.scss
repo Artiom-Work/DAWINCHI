@@ -1,0 +1,115 @@
+@use "../healpers" as *;
+
+.start {
+  padding-bottom: var(--sectionPadding);
+
+  &__title {
+    margin-bottom: fluid(60, 20);
+    text-align: center;
+
+    @include mobile-s-media {
+      text-align: start;
+    }
+  }
+
+  &__info {
+    @include flex-space-between;
+
+    gap: rem(20);
+    margin-bottom: fluid(70, 20);
+
+    @include mobile-media {
+      flex-direction: column;
+    }
+    @include mobile-s-media {
+      align-items: start;
+    }
+  }
+
+  &__info-weather {
+    max-width: 100% !important;
+
+    .lgFavo {
+      max-width: fluid(640, 320) !important;
+
+      @include tablet-media {
+        max-width: fluid(510, 320) !important;
+      }
+      @include mobile-media {
+        max-width: 100% !important;
+      }
+    }
+    .fNdNyi {
+      min-height: rem(300) !important;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      border-radius: var(--border-radius) !important;
+
+      @include mobile-media {
+        min-height: rem(148) !important;
+      }
+    }
+
+    .eapps-widget-toolbar {
+      display: none;
+    }
+  }
+
+  &__info-buttons {
+    @include mobile-media {
+      max-width: rem(320);
+    }
+  }
+
+  &__info-button {
+    width: 100%;
+
+    padding-inline: rem(70);
+
+    &:not(:last-child) {
+      margin-bottom: fluid(50, 10);
+    }
+
+    @include tablet-media {
+      padding-inline: rem(35);
+    }
+  }
+
+  &__soc1al {
+    text-align: center;
+    font-size: rem(18);
+
+    @include mobile-media {
+      font-size: rem(17);
+    }
+    @include mobile-s-media {
+      text-align: start;
+    }
+
+    &-heading {
+      text-transform: uppercase;
+      color: var(--color-accent-dark);
+      margin-bottom: fluid(10, 5);
+      font-size: rem(18);
+
+      @include mobile-media {
+        font-size: rem(17);
+      }
+    }
+
+    &-link {
+      color: var(--color-light);
+      transition-duration: var(--transition-duration);
+
+      @include hover {
+        color: var(--color-accent-dark);
+      }
+      @include active {
+        color: var(--color-accent-medium);
+        scale: 0.98;
+      }
+    }
+  }
+}

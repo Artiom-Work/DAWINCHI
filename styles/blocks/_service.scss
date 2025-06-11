@@ -23,6 +23,10 @@
   }
 
   &__image {
+    &-wrapper {
+      flex-shrink: 0;
+    }
+
     border-radius: var(--border-radius);
     height: rem(211);
     width: 100%;
@@ -31,7 +35,6 @@
 
     @include mobile-media-above {
       border-radius: var(--border-radius-small);
-      flex-shrink: 0;
       width: rem(240);
       height: rem(140);
       margin-bottom: 0;

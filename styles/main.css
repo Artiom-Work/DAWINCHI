@@ -841,7 +841,7 @@ button[aria-label]::before {
 }
 @media (width <= 47.99875rem) {
   .promo {
-    --mainImageHeight: 47.5rem;
+    --mainImageHeight: 47.5625rem;
   }
 }
 .promo__image {

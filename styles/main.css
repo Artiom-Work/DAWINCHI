@@ -1158,8 +1158,6 @@ button[aria-label]::before {
   width: 100%;
   object-fit: cover;
   margin-bottom: 0.9375rem;
-}
-.service__image-wrapper {
   flex-shrink: 0;
 }
 @media (width > 47.99875rem) {

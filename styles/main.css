@@ -919,6 +919,17 @@ button[aria-label]::before {
 .strip__list .strip__item:nth-child(4n-1) > .strip__item-icon {
   fill: var(--color-accent-dark);
 }
+.strip__list--animate {
+  translate: -50rem;
+  animation: scrollStripDesctopWidth 30s linear infinite;
+}
+.strip__list--animate-mobile {
+  translate: -18.75rem;
+  animation: scrollStripMobileWidth 30s linear infinite;
+}
+.strip__list--animate-mobile-reverse {
+  animation: scrollStripMobileWidthReverse 30s linear infinite;
+}
 @media (width <= 47.99875rem) {
   .strip__list {
     min-height: var(--promoStripHeight);

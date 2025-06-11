@@ -26,18 +26,18 @@
     & .strip__item:nth-child(4n-1) > .strip__item-icon {
       fill: var(--color-accent-dark);
     }
-    // &--animate {
-    //   translate: rem(-800);
-    //   animation: scrollStripDesctopWidth 30s linear infinite;
-    // }
-    // &--animate-mobile {
-    //   translate: rem(-300);
-    //   animation: scrollStripMobileWidth 30s linear infinite;
+    &--animate {
+      translate: rem(-800);
+      animation: scrollStripDesctopWidth 30s linear infinite;
+    }
+    &--animate-mobile {
+      translate: rem(-300);
+      animation: scrollStripMobileWidth 30s linear infinite;
 
-    //   &-reverse {
-    //     animation: scrollStripMobileWidthReverse 30s linear infinite;
-    //   }
-    // }
+      &-reverse {
+        animation: scrollStripMobileWidthReverse 30s linear infinite;
+      }
+    }
     @include mobile-media {
       min-height: var(--promoStripHeight);
     }

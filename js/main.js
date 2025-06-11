@@ -51,6 +51,7 @@ function bodyUnlock() {
 	};
 	a();
 })();
+
 // Full version
 // document.addEventListener('DOMContentLoaded', () => {
 // 	const textPaths = document.querySelectorAll('.location-strip__text-path');

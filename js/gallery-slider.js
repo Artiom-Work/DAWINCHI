@@ -1,6 +1,6 @@
 'use strict';
 
-const swiper = new Swiper(".gallery-slider", {
+const gallery = new Swiper(".gallery-slider", {
 	loop: true,
 	lazy: true,
 	pagination: {

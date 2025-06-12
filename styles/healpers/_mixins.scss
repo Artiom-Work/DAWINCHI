@@ -83,7 +83,7 @@
   border: none;
 }
 
-@mixin step-circle {
+@mixin step-circle() {
   @include square(#{rem(100)});
   @include flex-center(true);
 
@@ -91,7 +91,5 @@
   font-size: rem(40);
   color: var(--color-light);
   border-radius: 50%;
+  border: none;
 }
-// @mixin step-circle-line{
-
-// }

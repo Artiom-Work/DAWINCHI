@@ -190,6 +190,7 @@ svg * {
   --color-gray-dark: #999999;
   --color-gray: #adacac;
   --color-gray-light: #cecece;
+  --color-gray-opacity: #a9a9a9b3;
   --image-bow-shadow-dark: 0px 3px 14px 0px rgba(0, 0, 0, 0.25);
   --text-shadow-svg: 1px 1px 2px rgba(0, 0, 0, 0.5);
   --border: 0.0625rem solid var(--color-accent-light);
@@ -306,6 +307,7 @@ svg * {
   font-size: 2.5rem;
   color: var(--color-light);
   border-radius: 50%;
+  border: none;
 }
 @media (width <= 47.99875rem) {
   .step-circle {
@@ -971,6 +973,7 @@ button[aria-label]::before {
   color: var(--color-accent-dark);
   text-align: center;
   text-transform: uppercase;
+  padding-inline: var(--container-padding-x);
   margin-bottom: clamp(1.25rem, -0.0892857143rem + 5.4945054945vw, 4.375rem);
 }
 @media (width <= 47.99875rem) {
@@ -1029,7 +1032,6 @@ button[aria-label]::before {
   font-weight: 600;
   text-transform: uppercase;
   cursor: pointer;
-  border: none;
   transition-duration: var(--transition-duration);
 }
 @media (any-hover: hover) {
@@ -1095,6 +1097,7 @@ button[aria-label]::before {
   font-size: 2.5rem;
   color: var(--color-light);
   border-radius: 50%;
+  border: none;
   position: relative;
   background-color: var(--color-gray-light);
   color: var(--color-gray);
@@ -1681,6 +1684,141 @@ button[aria-label]::before {
   border: none;
   border-radius: var(--border-radius);
   box-sizing: border-box;
+}
+
+.price-drive__slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.625rem;
+  width: 16.875rem;
+  min-height: 19.375rem;
+}
+@media (width > 47.99875rem) {
+  .price-drive__slide.swiper-slide-active {
+    width: 20rem !important;
+  }
+  .price-drive__slide.swiper-slide-active .price-drive__slide-image {
+    height: 20rem;
+  }
+  .price-drive__slide.swiper-slide-active .price-drive__slide-name {
+    margin-top: 1.875rem;
+  }
+}
+@media (width <= 47.99875rem) {
+  .price-drive__slide {
+    width: 15rem;
+    min-height: 16.6875rem;
+  }
+  .price-drive__slide.swiper-slide-active .price-drive__slide-image-wrapper::before {
+    background-color: transparent;
+  }
+}
+.price-drive__slide-image {
+  width: inherit;
+  height: 16.875rem;
+}
+.price-drive__slide-image-wrapper {
+  position: relative;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+.price-drive__slide-image-wrapper::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: var(--color-gray-opacity);
+}
+@media (width > 47.99875rem) {
+  .price-drive__slide-image-wrapper::before {
+    display: none;
+  }
+}
+@media (width <= 47.99875rem) {
+  .price-drive__slide-image {
+    height: 15rem;
+  }
+}
+.price-drive__slide-name {
+  position: absolute;
+  left: 50%;
+  translate: -50%;
+  color: var(--color-light);
+  font-family: var(--font-family-second);
+  margin-top: 1.25rem;
+  text-transform: uppercase;
+}
+@media (width <= 47.99875rem) {
+  .price-drive__slide-name {
+    margin-top: 0.9375rem;
+    font-size: 0.875rem;
+  }
+}
+.price-drive__slide-price {
+  font-size: 1.5625rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--color-accent-dark);
+  font-family: var(--font-family-second);
+}
+@media (width <= 47.99875rem) {
+  .price-drive__slide-price {
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+}
+.price-drive__button {
+  width: 7.5rem;
+  height: 7.5rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute !important;
+  left: 58.1%;
+  top: 27.8%;
+  flex-shrink: 0;
+  z-index: 2;
+  text-transform: uppercase;
+  font-family: var(--font-family-second);
+  font-size: 1rem;
+  background-color: var(--color-accent-dark);
+  color: var(--color-light);
+  border-radius: 50%;
+  border: none;
+}
+@media (width <= 47.99875rem) {
+  .price-drive__button {
+    font-family: var(--font-family-base);
+    width: 4.375rem;
+    height: 4.375rem;
+    font-size: 0.75rem;
+    left: 63.3%;
+    top: 31.5%;
+  }
+}
+@media (any-hover: hover) {
+  .price-drive__button:hover {
+    background-color: var(--color-accent-medium);
+  }
+}
+@media (any-hover: hover) and (any-hover: none) {
+  .price-drive__button:active {
+    background-color: var(--color-accent-medium);
+  }
+}
+.price-drive__button:active {
+  scale: 0.98;
+  filter: brightness(70%);
+}
+
+.price-drive-slider {
+  position: relative;
+}
+.price-drive-slider__wrapper {
+  align-items: end;
 }
 
 .footer {

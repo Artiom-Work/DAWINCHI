@@ -7,7 +7,7 @@
     color: var(--color-accent-dark);
     text-align: center;
     text-transform: uppercase;
-
+    padding-inline: var(--container-padding-x);
     margin-bottom: fluid(70, 20);
 
     @include mobile-media {

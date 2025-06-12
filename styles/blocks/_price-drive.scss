@@ -1,0 +1,138 @@
+@use "../healpers" as *;
+
+.price-drive {
+  &__slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: rem(10);
+
+    width: rem(270);
+    min-height: rem(310);
+
+    @include mobile-media-above {
+      &.swiper-slide-active {
+        width: rem(320) !important;
+
+        .price-drive__slide-image {
+          height: rem(320);
+        }
+        .price-drive__slide-name {
+          margin-top: rem(30);
+        }
+      }
+    }
+
+    @include mobile-media {
+      width: rem(240);
+      min-height: rem(267);
+
+      &.swiper-slide-active {
+        .price-drive__slide-image-wrapper::before {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+
+  &__slide-image {
+    &-wrapper {
+      position: relative;
+      border-radius: var(--border-radius);
+      overflow: hidden;
+
+      &::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: var(--color-gray-opacity);
+
+        @include mobile-media-above {
+          display: none;
+        }
+      }
+    }
+
+    width: inherit;
+    height: rem(270);
+
+    @include mobile-media {
+      height: rem(240);
+    }
+  }
+
+  &__slide-name {
+    @include abs-x;
+
+    color: var(--color-light);
+    font-family: var(--font-family-second);
+    margin-top: rem(20);
+    text-transform: uppercase;
+
+    @include mobile-media {
+      margin-top: rem(15);
+      font-size: rem(14);
+    }
+  }
+
+  &__slide-price {
+    font-size: rem(25);
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--color-accent-dark);
+    font-family: var(--font-family-second);
+
+    @include mobile-media {
+      font-size: rem(14);
+      font-weight: 600;
+    }
+  }
+
+  &__button {
+    @include square(#{rem(120)});
+    @include flex-center(true);
+
+    position: absolute !important;
+    left: 58.1%;
+    top: 27.8%;
+
+    flex-shrink: 0;
+    z-index: 2;
+    text-transform: uppercase;
+    font-family: var(--font-family-second);
+    font-size: rem(16);
+    background-color: var(--color-accent-dark);
+    color: var(--color-light);
+    border-radius: 50%;
+    border: none;
+
+    @include mobile-media {
+      font-family: var(--font-family-base);
+      width: rem(70);
+      height: rem(70);
+      font-size: rem(12);
+      left: 63.3%;
+      top: 31.5%;
+    }
+
+    @include hover {
+      background-color: var(--color-accent-medium);
+    }
+
+    @include active {
+      scale: 0.98;
+      filter: brightness(70%);
+    }
+  }
+}
+
+.price-drive-slider {
+  position: relative;
+
+  &__wrapper {
+    align-items: end;
+  }
+}

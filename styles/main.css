@@ -176,9 +176,10 @@ svg * {
   --color-light: #ffffff;
   --color-light-opacity-10: #ffffff34;
   --color-light-opacity-90: #ffffffe6;
-  --color-dark: #000000;
   --color-light-opacity: #ffffff8d;
+  --color-dark: #000000;
   --color-dark-opacity: #00000066;
+  --color-dark-opacity-80: #00000033;
   --color-accent-dark: #0a59b1;
   --color-accent: #3ca5fa;
   --color-accent-medium: #48a0e9;
@@ -207,7 +208,7 @@ svg * {
   --container-padding-x: 1.25rem;
   --header-height: 6.25rem;
   --promo-strip-height: 3.75rem;
-  --sectionPadding: clamp(3.0625rem, 0.3571428571rem + 11.0989010989vw, 9.375rem);
+  --section-padding: clamp(3.0625rem, 0.3571428571rem + 11.0989010989vw, 9.375rem);
   --transition-duration: 0.3s;
 }
 @media (width <= 47.99875rem) {
@@ -338,6 +339,7 @@ main {
 .accent-background-zone {
   background-color: var(--color-accent-light);
   border-radius: var(--border-radius-large);
+  padding-block: 0 var(--section-padding);
 }
 @media (width <= 47.99875rem) {
   .accent-background-zone {
@@ -993,7 +995,7 @@ button[aria-label]::before {
 }
 
 .section {
-  padding-top: var(--sectionPadding);
+  padding-top: var(--section-padding);
 }
 .section__title {
   color: var(--color-accent-dark);
@@ -1009,7 +1011,7 @@ button[aria-label]::before {
 }
 
 .services {
-  padding-block: var(--sectionPadding);
+  padding-block: var(--section-padding);
 }
 .services__title {
   margin-bottom: clamp(1.0625rem, -0.2767857143rem + 5.4945054945vw, 4.1875rem);
@@ -1365,7 +1367,7 @@ button[aria-label]::before {
 .location {
   --locationBodyHeight: 31.25rem;
   --sectionMobileHeight: 55.25rem;
-  padding-bottom: var(--sectionPadding);
+  padding-bottom: var(--section-padding);
   position: relative;
   max-width: 100rem;
   margin-inline: auto;
@@ -1386,11 +1388,11 @@ button[aria-label]::before {
 .location::before {
   background: linear-gradient(90deg, var(--color-light-opacity-90) 0%, var(--color-light-opacity-10) 100%);
   left: 0;
-  top: var(--sectionPadding);
+  top: var(--section-padding);
 }
 .location::after {
   background: linear-gradient(90deg, var(--color-light-opacity-10) 0%, var(--color-light-opacity-90) 100%);
-  top: var(--sectionPadding);
+  top: var(--section-padding);
   right: 0;
 }
 @media (width <= 47.99875rem) {
@@ -1838,9 +1840,90 @@ button[aria-label]::before {
   align-items: end;
 }
 
+.profit__slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  max-width: 48.625rem;
+  padding-inline: 0.625rem 0;
+}
+@media (width <= 47.99875rem) {
+  .profit__slide {
+    gap: 0.625rem;
+  }
+}
+.profit__slide-image {
+  width: inherit;
+  height: inherit;
+}
+.profit__slide-image-wrapper {
+  width: 420;
+  height: 420;
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  cursor: grab;
+}
+@media (width <= 47.99875rem) {
+  .profit__slide-image-wrapper {
+    width: 11.875rem;
+    height: 11.875rem;
+  }
+}
+.profit__slide-image-wrapper::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: var(--color-dark-opacity-80);
+}
+.profit__slide-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+@media (width <= 47.99875rem) {
+  .profit__slide-content {
+    gap: 0.3125rem;
+  }
+}
+.profit__slide-counter {
+  color: var(--color-accent-dark);
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+@media (width <= 47.99875rem) {
+  .profit__slide-counter {
+    font-size: 0.875rem;
+  }
+}
+.profit__slide-name {
+  color: var(--color-accent-dark);
+  text-transform: uppercase;
+  font-size: 1.5625rem;
+}
+@media (width <= 47.99875rem) {
+  .profit__slide-name {
+    font-size: 0.875rem;
+  }
+}
+.profit__text {
+  font-size: 1.125rem;
+}
+@media (width <= 47.99875rem) {
+  .profit__text {
+    font-size: 0.75rem;
+  }
+}
+
 .contacts {
-  padding-block: var(--sectionPadding) 0;
-  margin-bottom: var(--sectionPadding);
+  padding-block: var(--section-padding) 0;
+  margin-bottom: var(--section-padding);
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   gap: 1.25rem;

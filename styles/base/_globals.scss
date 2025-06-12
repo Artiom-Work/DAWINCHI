@@ -24,6 +24,7 @@ main {
 .accent-background-zone {
   background-color: var(--color-accent-light);
   border-radius: var(--border-radius-large);
+  padding-block: 0 var(--section-padding);
 
   @include mobile-media {
     border-radius: var(--border-radius);

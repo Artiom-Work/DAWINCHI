@@ -1,7 +1,7 @@
 @use "../healpers" as *;
 
 .services {
-  padding-block: var(--sectionPadding);
+  padding-block: var(--section-padding);
 
   &__title {
     margin-bottom: fluid(67, 17);

@@ -4,9 +4,10 @@
   --color-light: #ffffff;
   --color-light-opacity-10: #ffffff34;
   --color-light-opacity-90: #ffffffe6;
-  --color-dark: #000000;
   --color-light-opacity: #ffffff8d;
+  --color-dark: #000000;
   --color-dark-opacity: #00000066;
+  --color-dark-opacity-80: #00000033;
 
   --color-accent-dark: #0a59b1;
   --color-accent: #3ca5fa;
@@ -44,7 +45,7 @@
   --container-padding-x: #{rem(20)};
   --header-height: #{rem(100)};
   --promo-strip-height: #{rem(60)};
-  --sectionPadding: #{fluid(150, 49)};
+  --section-padding: #{fluid(150, 49)};
 
   --transition-duration: 0.3s;
 

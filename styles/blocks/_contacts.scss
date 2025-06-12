@@ -1,8 +1,8 @@
 @use "../healpers" as *;
 
 .contacts {
-  padding-block: var(--sectionPadding) 0;
-  margin-bottom: var(--sectionPadding);
+  padding-block: var(--section-padding) 0;
+  margin-bottom: var(--section-padding);
 
   display: grid;
   grid-template-columns: 1fr auto 1fr;

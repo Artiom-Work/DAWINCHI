@@ -4,7 +4,7 @@
   --locationBodyHeight: #{rem(500)};
   --sectionMobileHeight: #{rem(884)};
 
-  padding-bottom: var(--sectionPadding);
+  padding-bottom: var(--section-padding);
   position: relative;
   max-width: rem(1600);
   margin-inline: auto;
@@ -30,7 +30,7 @@
       var(--color-light-opacity-10) 100%
     );
     left: 0;
-    top: var(--sectionPadding);
+    top: var(--section-padding);
   }
 
   &::after {
@@ -40,7 +40,7 @@
       var(--color-light-opacity-90) 100%
     );
 
-    top: var(--sectionPadding);
+    top: var(--section-padding);
     right: 0;
   }
 

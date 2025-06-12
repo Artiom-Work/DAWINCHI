@@ -1,7 +1,7 @@
 @use "../healpers" as *;
 
 .section {
-  padding-top: var(--sectionPadding);
+  padding-top: var(--section-padding);
 
   &__title {
     color: var(--color-accent-dark);

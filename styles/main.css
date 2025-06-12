@@ -1694,17 +1694,6 @@ button[aria-label]::before {
   width: 16.875rem;
   min-height: 19.375rem;
 }
-@media (width > 47.99875rem) {
-  .price-drive__slide.swiper-slide-active {
-    width: 20rem !important;
-  }
-  .price-drive__slide.swiper-slide-active .price-drive__slide-image {
-    height: 20rem;
-  }
-  .price-drive__slide.swiper-slide-active .price-drive__slide-name {
-    margin-top: 1.875rem;
-  }
-}
 @media (width <= 47.99875rem) {
   .price-drive__slide {
     width: 15rem;

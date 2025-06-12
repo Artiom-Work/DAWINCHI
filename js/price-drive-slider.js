@@ -9,6 +9,14 @@ const priceDriveSlider = new Swiper(".price-drive-slider", {
 	navigation: {
 		nextEl: ".price-drive__button",
 	},
+	effect: "coverflow",
+	coverflowEffect: {
+		rotate: 15,
+		stretch: -25,
+		depth: 200,
+		modifier: 1.3,
+		slideShadows: false,
+	},
 	breakpoints: {
 		768: {
 			spaceBetween: 50,

@@ -107,6 +107,7 @@
     color: var(--color-light);
     border-radius: 50%;
     border: none;
+    transition-duration: var(--transition-duration) !important;
 
     @include mobile-media {
       font-family: var(--font-family-base);
@@ -118,7 +119,9 @@
     }
 
     @include hover {
-      background-color: var(--color-accent-medium);
+      background-color: var(--color-yellow);
+      filter: brightness(80%);
+      color: var(--color-accent-dark);
     }
 
     @include active {

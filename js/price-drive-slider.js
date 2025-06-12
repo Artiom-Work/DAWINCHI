@@ -12,7 +12,7 @@ const priceDriveSlider = new Swiper(".price-drive-slider", {
 	effect: "coverflow",
 	coverflowEffect: {
 		rotate: 15,
-		stretch: -25,
+		stretch: -40,
 		depth: 200,
 		modifier: 1.3,
 		slideShadows: false,

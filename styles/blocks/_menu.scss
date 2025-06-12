@@ -15,6 +15,7 @@
   &__link {
     @include fluid-text(18, 12);
 
+    transition-duration: var(--transition-duration) !important;
     @include hover {
       color: var(--color-accent-light);
     }

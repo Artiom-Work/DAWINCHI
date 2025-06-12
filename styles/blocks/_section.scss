@@ -8,6 +8,8 @@
     text-align: center;
     text-transform: uppercase;
 
+    margin-bottom: fluid(70, 20);
+
     @include mobile-media {
       text-align: start;
     }

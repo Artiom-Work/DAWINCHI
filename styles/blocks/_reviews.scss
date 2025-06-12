@@ -1,0 +1,24 @@
+@use "../healpers" as *;
+
+.reviews {
+  // Styles for yandex reviews widgets.
+
+  &__review {
+    overflow: hidden;
+    position: relative;
+
+    margin-inline: auto;
+    max-width: rem(380);
+    height: rem(600);
+    background-color: transparent !important;
+  }
+
+  &__iframe {
+    width: 100%;
+    height: 100%;
+
+    border: none;
+    border-radius: var(--border-radius);
+    box-sizing: border-box;
+  }
+}

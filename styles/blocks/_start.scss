@@ -1,15 +1,8 @@
 @use "../healpers" as *;
 
 .start {
-  padding-bottom: var(--sectionPadding);
-
   &__title {
     margin-bottom: fluid(60, 20);
-    text-align: center;
-
-    @include mobile-s-media {
-      text-align: start;
-    }
   }
 
   &__info {

@@ -1,10 +1,9 @@
 'use strict';
 
-const profitSlider = new Swiper(".profit-slider", {
+export const profitSlider = new Swiper(".profit-slider", {
 	centeredSlides: true,
 	slidesPerView: 1,
 	lazy: true,
-
 	breakpoints: {
 		480: {
 			centeredSlides: false,

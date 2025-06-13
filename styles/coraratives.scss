@@ -1,0 +1,19 @@
+// connecting general scss files
+@use "./base/normolize";
+@use "./base/fonts";
+@use "./base/variables";
+@use "./base/utils";
+@use "./base/globals";
+@use "./base/animation";
+//blocks
+@use "./blocks/button";
+@use "./blocks/logo";
+@use "./blocks/menu";
+@use "./blocks/mobile-menu";
+@use "./blocks/soc1als";
+@use "./blocks/header";
+@use "./blocks/section";
+@use "./blocks/location";
+@use "./blocks/location-strip";
+@use "./blocks/contacts";
+@use "./blocks/footer";

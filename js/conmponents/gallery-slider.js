@@ -1,8 +1,9 @@
 'use strict';
 
-const gallery = new Swiper(".gallery-slider", {
+export const gallerySlider = new Swiper(".gallery-slider", {
 	loop: true,
 	lazy: true,
+	grabCursor: true,
 	pagination: {
 		el: ".gallery-slider__pagination",
 		clickable: true,

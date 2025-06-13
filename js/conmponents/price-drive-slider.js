@@ -1,6 +1,6 @@
 'use strict';
 
-const priceDriveSlider = new Swiper(".price-drive-slider", {
+export const priceDriveSlider = new Swiper(".price-drive-slider", {
 	slidesPerView: 'auto',
 	centeredSlides: true,
 	spaceBetween: 15,

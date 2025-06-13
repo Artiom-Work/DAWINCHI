@@ -1,0 +1,232 @@
+@use "../healpers" as *;
+
+.svc {
+  &__title {
+    @include tablet-media-above {
+      margin-bottom: fluid(241, 20);
+    }
+  }
+
+  &__body {
+    position: relative;
+    max-width: rem(1600);
+    width: 100%;
+    margin-inline: auto;
+    min-height: fluid(328, 265);
+
+    @include tablet-media {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: fluid(550, 265);
+      padding-inline: var(--container-padding-x);
+    }
+  }
+}
+
+.svc__list {
+  @include flex-space-between;
+
+  @include mobile-media {
+    gap: rem(10);
+  }
+  @include mobile-media-above {
+    justify-content: center;
+  }
+  @include tablet-media {
+    gap: rem(30);
+  }
+  @include tablet-media-above {
+    position: absolute;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    top: -39%;
+    left: 62.5%;
+    min-height: fluid(441, 265);
+  }
+  @include laptop-media-above {
+    top: -42%;
+  }
+  &-item {
+    @include fluid-text(20, 12);
+
+    font-family: var(--font-family-second);
+    text-transform: uppercase;
+    font-weight: 500;
+
+    color: var(--color-accent-dark);
+
+    @include tablet-media-above {
+      &:nth-child(3) {
+        margin-top: auto;
+      }
+      &:not(:last-child) {
+        margin-bottom: rem(25);
+      }
+      &:first-child,
+      &:last-child {
+        margin-left: -40%;
+      }
+    }
+  }
+}
+
+.svc__general {
+  position: relative;
+
+  @include tablet-media-above {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+  }
+
+  &-content {
+    position: relative;
+    z-index: 10;
+    background-color: var(--color-accent-medium) !important;
+
+    &::before {
+      position: absolute;
+      z-index: 0;
+      content: "";
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background-color: var(--color-accent-medium) !important;
+
+      @include tablet-media {
+        display: none;
+      }
+      @include laptop-media-above {
+        border-radius: 0 var(--border-radius) var(--border-radius) 0;
+      }
+    }
+    &::after {
+      position: absolute;
+      z-index: -10;
+      content: "";
+
+      background: var(--color-accent-dark);
+      clip-path: url(#button-background);
+      min-height: rem(336);
+
+      left: -60.5%;
+      top: -47%;
+      right: 31%;
+
+      @include laptop-media {
+        min-height: rem(260);
+        top: -25%;
+        left: -80.5%;
+      }
+      @include tablet-media {
+        min-height: unset;
+        top: -26%;
+        left: -12%;
+        width: 112%;
+        bottom: 62%;
+      }
+    }
+
+    @include tablet-media {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      gap: rem(10);
+      min-height: fluid(325, 156);
+      padding: 0 fluid(75, 15) rem(10);
+      border-radius: 0 0 var(--border-radius) var(--border-radius);
+    }
+
+    @include tablet-media-above {
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+      justify-content: center;
+      padding-inline: var(--container-padding-x);
+      gap: rem(10);
+      width: 60%;
+      min-height: rem(169);
+      padding-block: rem(18);
+    }
+
+    @include laptop-media-above {
+      padding-inline: 22.5% var(--container-padding-x);
+      align-items: start;
+      border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    }
+  }
+
+  &-title {
+    @include fluid-text(25, 12);
+
+    position: relative;
+    color: var(--color-light);
+    font-weight: 500;
+    text-transform: uppercase;
+
+    @include tablet-media {
+      align-self: end;
+    }
+  }
+
+  &-text {
+    @include fluid-text(18, 12);
+
+    position: relative;
+    z-index: 1;
+    @include mobile-s-media-above {
+      text-align: center;
+    }
+    @include tablet-media-above {
+      text-align: end;
+      max-width: rem(441);
+    }
+    @include laptop-media-above {
+      text-align: start;
+    }
+  }
+}
+
+.svc__image {
+  &-wrapper {
+    position: absolute;
+    z-index: 20;
+    width: rem(500);
+    height: rem(500);
+
+    border-radius: 50%;
+
+    left: 14%;
+    @include laptop-media {
+      width: rem(430);
+      height: rem(430);
+    }
+    @include tablet-media {
+      width: fluid(450, 160);
+      height: fluid(450, 160);
+      top: -54.4%;
+      left: fluid(150, 0);
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      width: inherit;
+      height: inherit;
+      z-index: 0;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-color: var(--color-dark-opacity-80);
+    }
+  }
+
+  width: inherit;
+  height: inherit;
+}

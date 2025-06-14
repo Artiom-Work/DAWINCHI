@@ -27,15 +27,16 @@
 .svc__list {
   @include flex-space-between;
 
+  @include tablet-media {
+    gap: rem(30);
+  }
   @include mobile-media {
     gap: rem(10);
   }
   @include mobile-media-above {
     justify-content: center;
   }
-  @include tablet-media {
-    gap: rem(30);
-  }
+
   @include tablet-media-above {
     position: absolute;
     flex-direction: column;

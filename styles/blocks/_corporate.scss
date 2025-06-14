@@ -71,6 +71,11 @@
     width: 100%;
     border-radius: var(--border-radius-medium);
 
+    @include mobile-media {
+      border-radius: var(--border-radius);
+      min-height: rem(280);
+      object-fit: cover;
+    }
     &-wrapper {
       grid-area: image;
     }
@@ -106,11 +111,15 @@
     &-title {
       margin-bottom: var(--corporateIndent);
     }
+
     &-video {
       width: 100%;
       border-radius: var(--border-radius-medium);
-      max-height: rem(650);
-      height: fluid(650, 160);
+      height: fluid(650, 280);
+
+      @include mobile-media {
+        border-radius: var(--border-radius);
+      }
     }
   }
 }

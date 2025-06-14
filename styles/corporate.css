@@ -988,6 +988,13 @@ button[aria-label]::before {
   width: 100%;
   border-radius: var(--border-radius-medium);
 }
+@media (width <= 47.99875rem) {
+  .corporate__info-image {
+    border-radius: var(--border-radius);
+    min-height: 17.5rem;
+    object-fit: cover;
+  }
+}
 .corporate__info-image-wrapper {
   grid-area: image;
 }
@@ -1025,8 +1032,12 @@ button[aria-label]::before {
 .corporate__preview-video {
   width: 100%;
   border-radius: var(--border-radius-medium);
-  max-height: 40.625rem;
-  height: clamp(10rem, -3.125rem + 53.8461538462vw, 40.625rem);
+  height: clamp(17.5rem, 7.5892857143rem + 40.6593406593vw, 40.625rem);
+}
+@media (width <= 47.99875rem) {
+  .corporate__preview-video {
+    border-radius: var(--border-radius);
+  }
 }
 
 .location {

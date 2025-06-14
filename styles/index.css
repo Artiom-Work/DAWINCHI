@@ -912,7 +912,7 @@ button[aria-label]::before {
   }
 }
 .header--corporate {
-  background: url(../../images/header/header-bg.webp) no-repeat center/cover;
+  background: url(../images/header/header-bg.webp) no-repeat center/cover;
 }
 .header--corporate::before {
   content: "";

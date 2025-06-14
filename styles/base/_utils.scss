@@ -70,6 +70,7 @@
   transition-duration: 1s;
   opacity: 1;
 }
+
 .step-circle {
   @include step-circle;
   @include mobile-media {

@@ -27,6 +27,3 @@ moveStrip();
 stylingWeatherWidget();
 
 initServicesSlider();
-gallerySlider();
-priceDriveSlider();
-profitSlider();

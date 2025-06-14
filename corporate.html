@@ -13,13 +13,14 @@
 	<meta name="description"
 		content="Уникальный корпоратив в вейк-парке СПб: закройте парк для своей компании! 2 трассы, все снаряжение включено, инструктаж для новичков. Закажите нестандартный тимбилдинг!">
 	<title>DAWINCHI | Корпоративы</title>
-	<link rel="stylesheet" href="./styles/coraratives.css">
+	<link rel="stylesheet" href="./styles/corporate.css">
+	<script type="module" src="./js/conmponents/preloader.js"></script>
 
 </head>
 
 
 <body>
-	<header class="header">
+	<header class="header header--corporate opacity-on">
 		<div class="header__inner container">
 			<a class="header__logo logo" href="./index.html" aria-label="Логотип davinvchi" title="DAWINCHI">
 				<img class="logo__image" src="./images/logo/logo.svg" width="200" height="62" alt="Логотип davinvchi">
@@ -53,7 +54,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="./coraratives.html" class="menu__link underline-effect">
+						<a href="./corporate.html" class="menu__link underline-effect">
 							Корпоративы
 						</a>
 					</li>
@@ -166,7 +167,7 @@
 								</a>
 							</li>
 							<li>
-								<a href="./coraratives.html" class="menu__link underline-effect">
+								<a href="./corporate.html" class="menu__link underline-effect">
 									Корпоративы
 								</a>
 							</li>
@@ -187,14 +188,70 @@
 		</div>
 	</header>
 
-	<main class="content">
+	<main class="content opacity-on">
+		<h1 class="visually-hidden">dawinchi wake park. Корпоративы</h1>
 
+		<section class="corporate section container" aria-labelledby="corporate-title">
+			<h2 class="corporate__title section__title h2" id="corporate-title">
+				корпоративы
+			</h2>
 
+			<section class="corporate__info">
+				<h3 class="corporate__info-title corporate__info-title--first corporate__subtitle h3">
+					Для проведения вашего мероприятия мы&nbsp;специально закроем наш парк.
+				</h3>
 
+				<h3 class="corporate__info-title corporate__info-title--second corporate__subtitle h3">
+					Для удобства будут работать сразу
+					2&nbsp;трассы нашей лебедки.
+				</h3>
 
+				<div class="corporate__text">
+					<p>
+						Все необходимое включено в&nbsp;стоимость (первичный инструктаж на&nbsp;суше, гидрокостюмы, спасательные
+						жилеты, шлемы, обучение навыкам вставания на&nbsp;доску, разворотов, а&nbsp;для самых смелых&nbsp;&mdash;
+						трюков).
+					</p>
+				</div>
 
+				<div class="corporate__text corporate__text--price">
+					<p>
+						<a href="https://dawinchiwakepark.ru/DaWinchiCorpPrice.pdf" target='_blank'>Посмотрите цены </a>
+						на&nbsp;проведение Вашего корпоратива.
+					</p>
+				</div>
 
-		<section class="location section" aria-labelledby="location-title">
+				<div class="corporate__text corporate__text--mailto">
+					<p>
+						Для заказа корпоративного мероприятия
+						<a href="mailto:pavkina@gmail.com?subject=Вопрос&body=Здравствуйте!Хочу заказать корпоративное мероприятие"
+							target='_blank'>напишите нам </a>
+						.
+					</p>
+				</div>
+
+				<picture class="corporate__info-image-wrapper">
+					<source srcset="./images/corporate/group-picture-mobile.webp" media="(max-width: 767px)" type="image/webp">
+					<source srcset="./images/corporate/group-picture.webp 1x , ./images/corporate/group-picture@2x.webp 2x"
+						type="image/webp">
+					<img class="corporate__info-image" src="./images/corporate/group-picture-mobile.webp" alt="Групповое фото"
+						width="727" height="363" loading="lazy">
+				</picture>
+			</section>
+
+			<section class="corporate__preview">
+				<h3 class="corporate__preview-title corporate__subtitle h3">
+					А&nbsp;вот так мы&nbsp;провели корпоративное мероприятие для сети мастерских &laquo;Две атмосферы&raquo;:
+				</h3>
+
+				<iframe class="corporate__preview-video" src="https://www.youtube.com/embed/DppBQGmZBcw?si=nMI9pPrJuZcrNrS2"
+					width="320" height="160" title="DAWINCHI videos" frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+					referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+			</section>
+		</section>
+
+		<section class="location location--corporate section" aria-labelledby="location-title">
 			<h2 class="section__title h2" id="location-title">
 				Наши координаты
 			</h2>
@@ -577,7 +634,7 @@
 		</section>
 	</main>
 
-	<footer class="footer">
+	<footer class="footer opacity-on">
 		<div class="footer__inner">
 			<div class="footer__heading">
 				<svg class="footer__heading-background hidden-tablet" viewBox="0 0 1000 156" width="1000" height="156">
@@ -636,7 +693,7 @@
 						</li>
 
 						<li>
-							<a class="footer__nav-link underline-effect footer__link" href="./coraratives.html">
+							<a class="footer__nav-link underline-effect footer__link" href="./corporate.html">
 								корпоративы
 							</a>
 						</li>
@@ -649,6 +706,7 @@
 							Политика конфиденциальности
 						</a>
 					</li>
+
 					<li>
 						<a class="footer__privacy-policy-link footer__link" href="./index.html">
 							Снятие ответственности
@@ -660,6 +718,14 @@
 
 	</footer>
 
+	<div class="preloader">
+		<div class="preloader__wrapper">
+			<dotlottie-player class="preloader__anitation"
+				src="https://lottie.host/29fbe5d7-e5d8-4926-b796-5c449bbb68ad/2M4cFQbbof.lottie" background="transparent"
+				speed="1" style="width: 300px; height: 300px" loop autoplay></dotlottie-player>
+		</div>
+	</div>
+
 	<svg width="0" height="0">
 		<defs>
 			<clipPath id="button-background" clipPathUnits="objectBoundingBox">
@@ -669,8 +735,10 @@
 		</defs>
 	</svg>
 
-	<script type="module" src="./js/coraratives.js"></script>
 
+	<script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+
+	<script type="module" src="./js/corporate.js"></script>
 </body>
 
 </html>

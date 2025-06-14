@@ -15,7 +15,7 @@
   animation-timeline: scroll();
   animation-range: rem(100) rem(200);
 
-  .header__inner {
+  &__inner {
     @include flex-space-between;
 
     gap: rem(10);
@@ -28,11 +28,11 @@
     }
   }
 
-  .header__logo {
+  &__logo {
     flex-shrink: 0;
   }
 
-  .header__soc1als {
+  &__soc1als {
     margin-left: auto;
 
     @include tablet-media-above {
@@ -40,6 +40,18 @@
       max-width: rem(170);
       width: 100%;
       margin-left: unset;
+    }
+  }
+
+  &--corporate {
+    background: url(../../images/header/header-bg.webp) no-repeat center / cover;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: var(--color-dark-opacity-60);
     }
   }
 }

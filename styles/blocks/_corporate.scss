@@ -1,0 +1,116 @@
+@use "../healpers" as *;
+
+.corporate {
+  --corporateIndent: #{fluid(40, 20)};
+  --corporateIndentSmall: #{fluid(20, 10)};
+
+  padding-block: fluid(115, 49) 0;
+
+  &__title,
+  &__subtitle {
+    color: var(--color-accent-dark);
+  }
+
+  &__title {
+    margin-bottom: fluid(50, 20);
+    padding-inline: 0;
+  }
+
+  &__subtitle {
+    font-weight: 500;
+    list-style: 1.2;
+    max-width: rem(817);
+  }
+
+  &__info {
+    margin-bottom: fluid(70, 20);
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+      "title-1 title-1 text price"
+      "title-2 title-2 text mailto"
+      "image image image image";
+    row-gap: var(--corporateIndent);
+    column-gap: var(--corporateIndentSmall);
+
+    &-title {
+      &--first {
+        grid-area: title-1;
+      }
+      &--second {
+        grid-area: title-2;
+      }
+    }
+
+    @include laptop-media {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(4, auto);
+      grid-template-areas:
+        "title-1 text"
+        "title-2  title-2"
+        "price mailto"
+        "image image";
+    }
+
+    @include mobile-media {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(6, auto);
+      grid-template-areas:
+        "title-1"
+        "price"
+        "title-2"
+        "mailto"
+        "text"
+        "image";
+    }
+  }
+
+  &__info-image {
+    width: 100%;
+    border-radius: var(--border-radius-medium);
+
+    &-wrapper {
+      grid-area: image;
+    }
+  }
+
+  &__text {
+    grid-area: text;
+
+    a {
+      color: var(--color-accent);
+      transition-duration: var(--transition-duration) !important;
+
+      @include hover {
+        text-decoration: none;
+        color: var(--color-accent-light);
+      }
+
+      @include active {
+        filter: brightness(80%);
+      }
+    }
+
+    &--price {
+      grid-area: price;
+    }
+
+    &--mailto {
+      grid-area: mailto;
+    }
+  }
+
+  &__preview {
+    &-title {
+      margin-bottom: var(--corporateIndent);
+    }
+    &-video {
+      width: 100%;
+      border-radius: var(--border-radius-medium);
+      max-height: rem(650);
+      height: fluid(650, 160);
+    }
+  }
+}

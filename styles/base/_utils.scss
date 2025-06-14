@@ -5,7 +5,6 @@
   margin-inline: auto;
   padding-inline: var(--container-padding-x);
 }
-
 .visually-hidden {
   @include visually-hidden;
 }
@@ -55,13 +54,21 @@
   }
 }
 .lock-body {
-  overflow: hidden;
+  overflow: hidden !important;
 }
 .hide-layer {
-  z-index: -1;
+  z-index: -1 !important;
 }
 .blur-layer {
   filter: blur(rem(12));
+}
+.opacity-on {
+  opacity: 0;
+  transition-duration: 1s;
+}
+.opacity-off {
+  transition-duration: 1s;
+  opacity: 1;
 }
 .step-circle {
   @include step-circle;

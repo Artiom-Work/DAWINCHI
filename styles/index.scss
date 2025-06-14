@@ -6,6 +6,7 @@
 @use "./base/globals";
 @use "./base/animation";
 //blocks
+@use "./blocks/preloader";
 @use "./blocks/button";
 @use "./blocks/logo";
 @use "./blocks/menu";

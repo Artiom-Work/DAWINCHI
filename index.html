@@ -15,12 +15,12 @@
 	<link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css">
 	<title>DAWINCHI</title>
 	<link rel="stylesheet" href="./styles/index.css">
-
+	<script type="module" src="./js/conmponents/preloader.js"></script>
 </head>
 
 
 <body>
-	<header class="header">
+	<header class="header opacity-on">
 		<div class="header__inner container">
 			<a class="header__logo logo" href="./index.html" aria-label="Логотип davinvchi" title="DAWINCHI">
 				<img class="logo__image" src="./images/logo/logo.svg" width="200" height="62" alt="Логотип davinvchi">
@@ -54,7 +54,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="./coraratives.html" class="menu__link underline-effect">
+						<a href="./corporate.html" class="menu__link underline-effect">
 							Корпоративы
 						</a>
 					</li>
@@ -167,7 +167,7 @@
 								</a>
 							</li>
 							<li>
-								<a href="./coraratives.html" class="menu__link underline-effect">
+								<a href="./corporate.html" class="menu__link underline-effect">
 									Корпоративы
 								</a>
 							</li>
@@ -188,9 +188,9 @@
 		</div>
 	</header>
 
-	<main class="content">
+	<main class="content opacity-on">
+		<h1 class="visually-hidden">dawinchi wake park</h1>
 		<section class="promo" aria-labelledby="site-title">
-			<h1 class="visually-hidden" id="site-title">DAWINCHI WAKE PARK</h1>
 
 			<picture class="promo__image-wrapper">
 				<source srcset="./images/promo/promo-bg-mobile.webp" media="(max-width: 767px)" type="image/webp">
@@ -200,7 +200,7 @@
 			</picture>
 
 			<div class="promo__body container">
-				<h2 class="promo__title h1">DAWINCHI WAKE PARK</h2>
+				<h2 class="promo__title h1" id="site-title">DAWINCHI WAKE PARK</h2>
 
 				<div class="promo__text">
 					<p>
@@ -1511,7 +1511,7 @@
 		</section>
 	</main>
 
-	<footer class="footer">
+	<footer class="footer opacity-on">
 		<div class="footer__inner">
 			<div class="footer__heading">
 				<svg class="footer__heading-background hidden-tablet" viewBox="0 0 1000 156" width="1000" height="156">
@@ -1570,7 +1570,7 @@
 						</li>
 
 						<li>
-							<a class="footer__nav-link underline-effect footer__link" href="./coraratives.html">
+							<a class="footer__nav-link underline-effect footer__link" href="./corporate.html">
 								корпоративы
 							</a>
 						</li>
@@ -1594,6 +1594,15 @@
 
 	</footer>
 
+	<div class="preloader">
+		<div class="preloader__wrapper">
+			<dotlottie-player class="preloader__anitation"
+				src="https://lottie.host/29fbe5d7-e5d8-4926-b796-5c449bbb68ad/2M4cFQbbof.lottie" background="transparent"
+				speed="1" style="width: 300px; height: 300px" loop autoplay></dotlottie-player>
+		</div>
+	</div>
+
+
 	<svg width="0" height="0">
 		<defs>
 			<clipPath id="button-background" clipPathUnits="objectBoundingBox">
@@ -1603,11 +1612,14 @@
 		</defs>
 	</svg>
 
-
+	<script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
 	<script src="https://static.elfsight.com/platform/platform.js" async></script>
 	<script src="libs/swiper/swiper-bundle.min.js"></script>
 	<script type="module" src="./js/index.js"></script>
 
 </body>
+
+
+
 
 </html>

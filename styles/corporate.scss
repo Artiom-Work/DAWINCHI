@@ -6,6 +6,7 @@
 @use "./base/globals";
 @use "./base/animation";
 //blocks
+@use "./blocks/preloader";
 @use "./blocks/button";
 @use "./blocks/logo";
 @use "./blocks/menu";
@@ -13,6 +14,7 @@
 @use "./blocks/soc1als";
 @use "./blocks/header";
 @use "./blocks/section";
+@use "./blocks/corporate";
 @use "./blocks/location";
 @use "./blocks/location-strip";
 @use "./blocks/contacts";

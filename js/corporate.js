@@ -7,7 +7,7 @@ const pageFooter = document.querySelector('.footer');
 
 import { opemMobileMenu } from './conmponents/mobile-menu.js';
 import { bodyLock, bodyUnlock } from './utils/body-lock.js';
-// import { moveStrip } from './conmponents/animate-strip.js';
+import { moveStrip } from './conmponents/animate-strip.js';
 
 
 bodyLock(pageContent, pageFooter);
@@ -18,9 +18,9 @@ opemMobileMenu(menuSwitcher, mobileMenu,
 	() => bodyUnlock(pageContent, pageFooter)
 );
 
-// window.addEventListener('load', () => {
-// 	moveStrip();
-// });
+window.addEventListener('load', () => {
+	moveStrip();
+});
 
 
 

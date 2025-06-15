@@ -7,12 +7,14 @@ const pageFooter = document.querySelector('.footer');
 
 import { opemMobileMenu } from './conmponents/mobile-menu.js';
 import { bodyLock, bodyUnlock } from './utils/body-lock.js';
+import { createVideoFrame } from './conmponents/facade-youtube-video.js';
 import { moveStrip } from './conmponents/animate-strip.js';
 
 
 bodyLock(pageContent, pageFooter);
 bodyUnlock(pageContent, pageFooter);
 
+createVideoFrame();
 opemMobileMenu(menuSwitcher, mobileMenu,
 	() => bodyLock(pageContent, pageFooter),
 	() => bodyUnlock(pageContent, pageFooter)

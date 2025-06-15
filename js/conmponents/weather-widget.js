@@ -18,4 +18,9 @@ export function stylingWeatherWidget() {
 
 		observer.observe(weatherWidget, { childList: true, subtree: true });
 	});
+
+	window.addEventListener('load', () => {
+		const locationName = document.querySelector('.hsazHl');
+		locationName.textContent = 'Большие горки';
+	});
 }

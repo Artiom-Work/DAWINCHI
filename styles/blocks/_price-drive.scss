@@ -9,19 +9,6 @@
     width: rem(270);
     min-height: rem(310);
 
-    // @include mobile-media-above {
-    //   &.swiper-slide-active {
-    //     // width: rem(320) !important;
-
-    //     .price-drive__slide-image {
-    //       // height: rem(320);
-    //     }
-    //     .price-drive__slide-name {
-    //       // margin-top: rem(30);
-    //     }
-    //   }
-    // }
-
     @include mobile-media {
       width: rem(240);
       min-height: rem(267);
@@ -88,6 +75,15 @@
       font-size: rem(14);
       font-weight: 600;
     }
+  }
+
+  &__slide-link {
+    position: absolute !important;
+
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
   }
 
   &__button {

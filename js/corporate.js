@@ -18,7 +18,9 @@ opemMobileMenu(menuSwitcher, mobileMenu,
 	() => bodyUnlock(pageContent, pageFooter)
 );
 
-moveStrip();
+window.addEventListener('load', () => {
+	moveStrip();
+});
 
 
 

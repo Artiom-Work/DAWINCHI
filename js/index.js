@@ -26,8 +26,11 @@ opemMobileMenu(menuSwitcher, mobileMenu,
 	() => bodyUnlock(pageContent, pageFooter)
 );
 
-moveStrip();
+
 stylingWeatherWidget();
 
 initServicesSlider();
 svcImageSwitcher(svcImageWrapper, svcImage, 6500);
+window.addEventListener('load', () => {
+	moveStrip();
+});

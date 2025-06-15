@@ -10,7 +10,7 @@ const svcImageWrapper = document.querySelector('.svc__image-wrapper');
 
 import { opemMobileMenu } from './conmponents/mobile-menu.js';
 import { bodyLock, bodyUnlock } from './utils/body-lock.js';
-// import { moveStrip } from './conmponents/animate-strip.js';
+import { moveStrip } from './conmponents/animate-strip.js';
 import { stylingWeatherWidget } from './conmponents/weather-widget.js';
 import { initServicesSlider } from './conmponents/services-slider.js';
 import { gallerySlider } from './conmponents/gallery-slider.js';
@@ -31,6 +31,6 @@ stylingWeatherWidget();
 
 initServicesSlider();
 svcImageSwitcher(svcImageWrapper, svcImage, 6500);
-// window.addEventListener('load', () => {
-// 	moveStrip();
-// });
+window.addEventListener('load', () => {
+	moveStrip();
+});

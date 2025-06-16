@@ -12,6 +12,7 @@ import { opemMobileMenu } from './conmponents/mobile-menu.js';
 import { bodyLock, bodyUnlock } from './utils/body-lock.js';
 import { moveStrip } from './conmponents/animate-strip.js';
 import { createMapIframe } from './conmponents/create-map-iframe.js';
+import { createReviewIframe } from './conmponents/create-yandex-review.js';
 import { stylingWeatherWidget } from './conmponents/weather-widget.js';
 import { initServicesSlider } from './conmponents/services-slider.js';
 import { gallerySlider } from './conmponents/gallery-slider.js';
@@ -28,6 +29,7 @@ opemMobileMenu(menuSwitcher, mobileMenu,
 );
 
 createMapIframe();
+createReviewIframe();
 stylingWeatherWidget();
 
 initServicesSlider();

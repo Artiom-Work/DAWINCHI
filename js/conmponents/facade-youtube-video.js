@@ -3,7 +3,13 @@
 export function createVideoFrame() {
 	document.querySelector('.corporate__preview-video-preloader').addEventListener('click', function (event) {
 		const target = event.currentTarget;
-		const src = target.getAttribute('data-src');
+		let src = target.getAttribute('data-src');
+		if (src.indexOf('?') === -1) {
+			src += '?autoplay=1';
+		} else {
+			src += '&autoplay=1';
+		}
+
 		const iframe = document.createElement('iframe');
 		iframe.classList.add('corporate__preview-video');
 		iframe.setAttribute('src', src);

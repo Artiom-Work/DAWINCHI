@@ -15,7 +15,7 @@
 
   &__slide-image {
     &-wrapper {
-      @include square(420);
+      @include square(#{rem(420)});
 
       position: relative;
 

@@ -33,7 +33,8 @@ createReviewIframe();
 stylingWeatherWidget();
 
 initServicesSlider();
-svcImageSwitcher(svcImageWrapper, svcImage, 6500);
 window.addEventListener('load', () => {
 	moveStrip();
+	svcImageSwitcher(svcImageWrapper, svcImage, 6500);
 });
+

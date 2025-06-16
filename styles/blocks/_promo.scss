@@ -44,7 +44,7 @@
   &__title {
     margin-bottom: fluid(170, 155);
     line-height: 1;
-    letter-spacing: 1.5;
+    letter-spacing: rem(1.5);
 
     @include laptop-media {
       @include fluid-text(65, 45);

@@ -10,6 +10,15 @@
     --mainImageHeight: #{rem(761)};
   }
 
+  &__video {
+    object-fit: cover;
+    height: var(--mainImageHeight);
+    width: 100vw;
+    position: absolute;
+    z-index: -1;
+    top: calc(var(--header-height) * -1);
+    filter: brightness(60%);
+  }
   &__image {
     object-fit: cover;
     height: var(--mainImageHeight);
@@ -25,7 +34,7 @@
 
     &-wrapper {
       position: absolute;
-      z-index: -1;
+      z-index: -2;
       top: calc(var(--header-height) * -1);
       filter: brightness(60%);
     }

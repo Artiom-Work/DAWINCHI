@@ -17,7 +17,9 @@ export function stylingWeatherWidget() {
 				const innerObserver = new MutationObserver((mutations, innerObs) => {
 					const hideWidgetLink = weatherWidget.querySelector('a[rel="noreferrer"]');
 					const locationName = weatherWidget.querySelector('.hsazHl');
-
+					if (locationName) {
+						locationName.textContent = 'Большие горки';
+					}
 					if (locationName || hideWidgetLink) {
 						locationName.textContent = 'Большие горки';
 						hideWidgetLink.style.display = 'none';

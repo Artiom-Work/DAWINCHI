@@ -45,19 +45,18 @@
       grid-area: qr;
       justify-content: center;
     }
-
+    max-width: rem(180);
+    margin-inline: auto;
+    box-shadow: var(--image-bow-shadow-dark);
+    border-radius: var(--border-radius);
+    @include hover {
+      scale: 1.1;
+    }
+    @include active {
+      scale: 1;
+    }
     &-image {
-      box-shadow: var(--image-bow-shadow-dark);
-      border-radius: var(--border-radius);
       object-fit: contain;
-      transition-duration: var(--transition-duration);
-
-      @include hover {
-        scale: 1.1;
-      }
-      @include active {
-        scale: 1;
-      }
     }
   }
 

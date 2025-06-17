@@ -23,9 +23,6 @@
   }
 
   &__image {
-    &-wrapper {
-      flex-shrink: 0;
-    }
     border-radius: var(--border-radius);
     height: rem(211);
     width: 100%;

@@ -45,6 +45,19 @@ function bodyUnlock(pageContent, pageFooter) {
 	pageContent.classList.remove('blur-layer');
 }
 
+function moveStrip() {
+	let o = 0;
+	const animate = () => {
+		o = (o + 0.1) % 100;
+		document.querySelectorAll('.location-strip__text-path').forEach(p => {
+			const currentOffset = parseFloat(p.getAttribute('startOffset')) || 0;
+			p.setAttribute('startOffset', `${(currentOffset + 0.02) % 100}%`);
+		});
+		requestAnimationFrame(animate);
+	};
+	animate();
+}
+
 function createMapIframe() {
 	const container = document.getElementById('location-map-container');
 	if (!container) return;
@@ -60,23 +73,28 @@ function createMapIframe() {
 };
 
 function createVideoIFrame() {
-	document.querySelector('.corporate__preview-video-preloader').addEventListener('click', function (event) {
-		const target = event.currentTarget;
-		let src = target.getAttribute('data-src');
-		if (src.indexOf('?') === -1) {
-			src += '?autoplay=1';
-		} else {
-			src += '&autoplay=1';
-		}
+	const previewVideoPreloader = document.querySelector('.corporate__preview-video-preloader');
 
-		const iframe = document.createElement('iframe');
-		iframe.classList.add('corporate__preview-video');
-		iframe.setAttribute('src', src);
-		iframe.setAttribute('frameborder', '0');
-		iframe.setAttribute('allowfullscreen', '');
-		iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
-		target.replaceWith(iframe);
-	});
+	if (previewVideoPreloader) {
+		previewVideoPreloader.addEventListener('click', function (event) {
+			const target = event.currentTarget;
+			let src = target.getAttribute('data-src');
+			if (src.indexOf('?') === -1) {
+				src += '?autoplay=1';
+			} else {
+				src += '&autoplay=1';
+			}
+
+			const iframe = document.createElement('iframe');
+			iframe.classList.add('corporate__preview-video');
+			iframe.setAttribute('src', src);
+			iframe.setAttribute('frameborder', '0');
+			iframe.setAttribute('allowfullscreen', '');
+			iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+			target.replaceWith(iframe);
+		});
+	}
+
 };
 
 

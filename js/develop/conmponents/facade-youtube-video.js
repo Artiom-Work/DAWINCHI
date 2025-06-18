@@ -1,6 +1,6 @@
 'use strict';
 
-export function createVideoFrame() {
+export function createVideoIFrame() {
 	document.querySelector('.corporate__preview-video-preloader').addEventListener('click', function (event) {
 		const target = event.currentTarget;
 		let src = target.getAttribute('data-src');

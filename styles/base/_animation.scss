@@ -58,23 +58,24 @@
 
 @keyframes scrollStripMobileWidth {
   0% {
-    translate: rem(-300);
+    translate: rem(-700);
   }
   50% {
-    translate: 0;
+    translate: rem(700);
   }
   100% {
-    translate: rem(-300);
+    translate: rem(-700);
   }
 }
+
 @keyframes scrollStripMobileWidthReverse {
   0% {
-    translate: 0;
+    translate: rem(700);
   }
   50% {
-    translate: rem(-300);
+    translate: rem(-700);
   }
   100% {
-    translate: 0;
+    translate: rem(700);
   }
 }

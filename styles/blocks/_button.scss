@@ -75,7 +75,7 @@
     height: fluid(35, 20);
 
     &--navigator {
-      fill: red;
+      fill: var(--color-accent-red);
     }
   }
 }

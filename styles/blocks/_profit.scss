@@ -1,6 +1,33 @@
 @use "../healpers" as *;
 
 .profit {
+  &-slider {
+    &__button {
+      @include step-circle;
+
+      width: fluid(100, 44);
+      height: fluid(100, 44);
+      background-color: var(--color-accent-dark);
+      transition-duration: var(--transition-duration) !important;
+      top: 80%;
+      &::after {
+        @include fluid-text(44, 22);
+        font-weight: 900;
+      }
+
+      @include hover {
+        background-color: var(--color-yellow);
+        filter: brightness(80%);
+        color: var(--color-accent-dark);
+      }
+
+      @include active {
+        scale: 0.98;
+        filter: brightness(70%);
+      }
+    }
+  }
+
   &__slide {
     @include flex-center;
 

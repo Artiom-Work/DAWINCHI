@@ -5,10 +5,17 @@
   &__list {
     @include flex-center;
 
-    gap: rem(30);
+    gap: rem(15);
 
     @include laptop-media {
-      gap: rem(12);
+      column-gap: rem(30);
+      row-gap: rem(10);
+      flex-wrap: wrap;
+      max-width: rem(500);
+    }
+
+    @include tablet-media {
+      max-width: unset;
     }
   }
 

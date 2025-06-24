@@ -26,6 +26,7 @@
     padding-block: rem(50) rem(30);
     background-color: var(--color-light);
     text-transform: uppercase;
+    overflow: hidden;
 
     @include tablet-media {
       @include fluid-text(18, 12);
@@ -84,10 +85,16 @@
 
   &__title {
     @include fluid-text(30, 12);
-
+    @include flex-center;
+    gap: rem(10);
     font-weight: 500;
     margin-bottom: rem(10);
 
+    &-icon {
+      width: fluid(40, 20);
+      height: fluid(40, 20);
+      fill: var(--color-light);
+    }
     @include tablet-media {
       margin-bottom: unset;
     }
@@ -111,7 +118,7 @@
     &-list {
       @include flex-center;
 
-      gap: rem(30);
+      gap: fluid(30, 10);
     }
 
     &-link {

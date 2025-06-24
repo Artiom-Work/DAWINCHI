@@ -32,7 +32,9 @@
 
   --border: #{rem(1)} solid var(--color-accent-light);
   --border-white: #{rem(1)} solid var(--color-light);
+  --border-white-fat: #{rem(2)} solid var(--color-light);
 
+  --border-radius-extra-small: #{rem(5)};
   --border-radius-small: #{rem(10)};
   --border-radius: #{rem(20)};
   --border-radius-medium: #{rem(25)};
@@ -51,6 +53,12 @@
 
   --transition-duration: 0.3s;
 
+  @include desktop-media {
+    --container-padding-x: 9.375vw;
+  }
+  @include tablet-media {
+    --container-padding-x: #{rem(20)};
+  }
   @include mobile-media {
     --header-height: #{rem(60)};
   }

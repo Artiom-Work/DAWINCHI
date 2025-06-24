@@ -44,18 +44,6 @@
   }
 }
 
-@keyframes scrollStripDesctopWidth {
-  0% {
-    translate: rem(-800);
-  }
-  50% {
-    translate: rem(800);
-  }
-  100% {
-    translate: rem(-800);
-  }
-}
-
 @keyframes scrollStripMobileWidth {
   0% {
     translate: rem(-700);

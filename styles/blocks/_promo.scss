@@ -71,4 +71,31 @@
       margin-bottom: rem(33);
     }
   }
+
+  &__strip {
+    &-list {
+      @include flex-space-between;
+
+      max-width: var(--container-width);
+      width: 100%;
+      padding-inline: var(--container-padding-x);
+    }
+    &-icon {
+      width: fluid(35, 15);
+      height: fluid(35, 15);
+      fill: var(--color-light);
+      &-wrapper {
+        @include flex-center(true);
+
+        outline: var(--border-white-fat);
+        border-radius: var(--border-radius-extra-small);
+        padding: fluid(9, 3);
+        background-color: var(--color-accent-dark);
+
+        @include mobile-s-media {
+          outline: var(--border-white);
+        }
+      }
+    }
+  }
 }

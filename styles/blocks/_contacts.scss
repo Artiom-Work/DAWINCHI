@@ -9,11 +9,12 @@
   gap: rem(20);
 
   @include mobile-media {
-    grid-template-rows: repeat(2, auto);
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: 1fr;
     grid-template-areas:
-      "socials write"
-      "qr qr";
+      "socials"
+      "qr"
+      "write";
   }
   margin-bottom: rem(47);
 
@@ -22,12 +23,8 @@
     line-height: 1;
     color: var(--color-accent-dark);
 
-    @include mobile-s-media {
-      margin-bottom: rem(10);
-      font-size: rem(17);
-    }
-    &--social {
-      margin-bottom: fluid(20, 10);
+    @include mobile-media {
+      margin-bottom: rem(20);
     }
   }
 
@@ -64,7 +61,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     height: 100%;
     padding-block: fluid(15, 0) fluid(20, 0);
 

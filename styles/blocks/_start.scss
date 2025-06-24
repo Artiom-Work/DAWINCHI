@@ -11,7 +11,7 @@
     gap: rem(20);
     margin-bottom: fluid(70, 20);
 
-    @include mobile-media {
+    @include tablet-media {
       flex-direction: column;
     }
     @include mobile-s-media {
@@ -20,15 +20,13 @@
   }
 
   &__info-weather {
-    max-width: 100% !important;
-
     .lgFavo {
-      max-width: fluid(640, 320) !important;
+      max-width: 100%;
+      @include desktop-media {
+        max-width: clamp(#{rem(5)}, 40vw, #{rem(640)});
+      }
 
       @include tablet-media {
-        max-width: fluid(510, 320) !important;
-      }
-      @include mobile-media {
         max-width: 100% !important;
       }
     }
@@ -40,7 +38,7 @@
 
       border-radius: var(--border-radius) !important;
 
-      @include mobile-media {
+      @include tablet-media {
         min-height: rem(148) !important;
       }
     }
@@ -51,7 +49,7 @@
   }
 
   &__info-buttons {
-    @include mobile-media {
+    @include tablet-media {
       max-width: rem(320);
     }
   }

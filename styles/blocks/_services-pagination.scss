@@ -15,7 +15,7 @@
     height: rem(860);
   }
 
-  @include laptop-media-above {
+  @include desktop-media-above {
     left: 50%;
     translate: -50%;
   }

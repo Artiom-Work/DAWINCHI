@@ -7,9 +7,9 @@
 
   @include mobile-media-above {
     height: rem(156);
-    padding-inline: rem(100);
+    padding-inline: 0 rem(100);
   }
-  @include laptop-media-above {
+  @include desktop-media-above {
     padding-inline: 0;
   }
 

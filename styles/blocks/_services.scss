@@ -35,7 +35,7 @@
       }
     }
 
-    @include laptop-media-above {
+    @include desktop-media-above {
       .swiper-slide.service:nth-child(even) .service__card {
         flex-direction: row-reverse;
       }
@@ -54,14 +54,17 @@
     font-weight: 600;
     text-transform: uppercase;
     cursor: pointer;
-    transition-duration: var(--transition-duration);
+    transition-duration: var(--transition-duration) !important;
 
     @include hover {
-      background-color: var(--color-accent);
-    }
-    @include active {
+      background-color: var(--color-yellow);
       filter: brightness(80%);
-      scale: 0.95;
+      color: var(--color-accent-dark);
+    }
+
+    @include active {
+      scale: 0.98;
+      filter: brightness(70%);
     }
     &::after {
       display: block;
@@ -75,7 +78,7 @@
       background-color: inherit;
     }
 
-    @include laptop-media-above {
+    @include desktop-media-above {
       left: 50%;
       translate: -50%;
     }

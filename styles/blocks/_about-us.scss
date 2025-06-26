@@ -1,6 +1,6 @@
 @use "../healpers" as *;
 
-.svc {
+.about-us {
   &__title {
     @include tablet-media-above {
       margin-bottom: fluid(241, 20);
@@ -18,13 +18,13 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      min-height: fluid(550, 265);
+      min-height: fluid(580, 285);
       padding-inline: var(--container-padding-x);
     }
   }
 }
 
-.svc__list {
+.about-us__list {
   @include flex-space-between;
 
   @include tablet-media {
@@ -32,6 +32,9 @@
   }
   @include mobile-media {
     gap: rem(10);
+  }
+  @include mobile-s-media {
+    gap: rem(5);
   }
   @include mobile-media-above {
     justify-content: center;
@@ -49,15 +52,17 @@
   @include laptop-media-above {
     top: -42%;
   }
+
   &-item {
-    @include fluid-text(20, 12);
+    &.active-item {
+      opacity: 0;
+    }
 
-    font-family: var(--font-family-second);
-    text-transform: uppercase;
-    font-weight: 500;
-
-    color: var(--color-accent-dark);
-
+    @include tablet-media {
+      &.active-item {
+        display: none;
+      }
+    }
     @include tablet-media-above {
       &:nth-child(3) {
         margin-top: auto;
@@ -71,9 +76,26 @@
       }
     }
   }
+
+  &-button {
+    @include reset-button;
+    @include fluid-text(20, 10);
+
+    font-family: var(--font-family-second);
+    text-transform: uppercase;
+    font-weight: 500;
+
+    color: var(--color-accent-dark);
+    transition-duration: var(--transition-duration) !important;
+
+    @include active {
+      filter: brightness(80%);
+      scale: 0.95;
+    }
+  }
 }
 
-.svc__general {
+.about-us__general {
   position: relative;
 
   @include tablet-media-above {
@@ -137,7 +159,7 @@
       justify-content: space-between;
 
       gap: rem(10);
-      min-height: fluid(325, 156);
+      min-height: fluid(325, 176);
       padding: 0 fluid(75, 15) rem(10);
       border-radius: 0 0 var(--border-radius) var(--border-radius);
     }
@@ -155,7 +177,7 @@
       border-radius: var(--border-radius);
     }
 
-    @include laptop-media-above {
+    @include desktop-media-above {
       padding-inline: 22.5% var(--container-padding-x);
       align-items: start;
     }
@@ -177,22 +199,38 @@
   &-text {
     @include fluid-text(18, 12);
 
+    max-height: rem(100);
+    height: 100%;
+    overflow-y: auto;
     position: relative;
     z-index: 1;
     @include mobile-s-media-above {
       text-align: center;
     }
     @include tablet-media-above {
+      max-height: rem(92);
       text-align: end;
       max-width: rem(441);
     }
-    @include laptop-media-above {
+    @include desktop-media-above {
       text-align: start;
+    }
+
+    &--small {
+      font-size: rem(13);
+
+      @include tablet-media {
+        @include fluid-text(18, 12);
+      }
+
+      @include mobile-media {
+        font-size: rem(10);
+      }
     }
   }
 }
 
-.svc__image {
+.about-us__image {
   &-wrapper {
     position: absolute;
     z-index: 20;
@@ -203,14 +241,19 @@
     left: 14%;
 
     @include laptop-media {
-      width: rem(430);
-      height: rem(430);
+      width: rem(350);
+      height: rem(350);
     }
     @include tablet-media {
       width: fluid(450, 160);
       height: fluid(450, 160);
-      top: -54.4%;
+      // top: -54.4%;
+      top: -17vw;
       left: fluid(150, 0);
+    }
+
+    @include mobile-s-media {
+      top: -20vw;
     }
 
     &::before {

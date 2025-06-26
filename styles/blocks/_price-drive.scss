@@ -38,6 +38,13 @@
 
         @include mobile-media-above {
           display: none;
+          background: var(--color-light-opacity-10);
+        }
+      }
+
+      @include hover {
+        &::before {
+          display: block;
         }
       }
     }
@@ -122,6 +129,7 @@
     top: 0;
     right: 0;
     bottom: 0;
+    z-index: 1;
 
     &-text {
       @include flex-center(true);
@@ -134,24 +142,6 @@
       color: var(--color-light);
       transition-duration: var(--transition-duration) !important;
     }
-
-    @include hover {
-      .price-drive__slide-link-text {
-        color: var(--color-accent-light);
-      }
-
-      & ~ .price-drive__slide-text::after {
-        background: var(--color-accent-light);
-        filter: brightness(80%);
-      }
-    }
-
-    @include active {
-      .price-drive__slide-link-text,
-      & ~ .price-drive__slide-text::after {
-        filter: brightness(60%);
-      }
-    }
   }
 
   &__button {
@@ -159,7 +149,7 @@
     @include flex-center(true);
 
     position: absolute !important;
-    left: 58.1%;
+    left: 58%;
     top: 27.8%;
 
     flex-shrink: 0;
@@ -178,7 +168,7 @@
       width: rem(70);
       height: rem(70);
       font-size: rem(12);
-      left: 63.3%;
+      left: 70%;
       top: 31.5%;
     }
 

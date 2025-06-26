@@ -2,9 +2,9 @@
 
 let currentIndex = 0;
 const imagesPathes = [
-	'./images/svc/svc-1.webp',
-	'./images/svc/svc-2.webp',
-	'./images/svc/svc-3.webp',
+	'./images/about-us/about-us-1.webp',
+	'./images/about-us/about-us-2.webp',
+	'./images/about-us/about-us-3.webp',
 ];
 
 function changeImage(imageWrapper, image) {
@@ -22,10 +22,10 @@ function changeImage(imageWrapper, image) {
 	}, 1000);
 }
 
-function svcImageSwitcher(imageWrapper, image, interval = 6500) {
+function aboutUsImageSwitcher(imageWrapper, image, interval = 6500) {
 	setInterval(() => {
 		changeImage(imageWrapper, image);
 	}, interval);
 }
 
-export { svcImageSwitcher };
+export { aboutUsImageSwitcher };

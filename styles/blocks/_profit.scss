@@ -9,7 +9,8 @@
       height: fluid(100, 44);
       background-color: var(--color-accent-dark);
       transition-duration: var(--transition-duration) !important;
-      top: 80%;
+      top: 75%;
+
       &::after {
         @include fluid-text(44, 22);
         font-weight: 900;
@@ -24,6 +25,10 @@
       @include active {
         scale: 0.98;
         filter: brightness(70%);
+      }
+
+      @include mobile-s-media {
+        top: 20%;
       }
     }
   }

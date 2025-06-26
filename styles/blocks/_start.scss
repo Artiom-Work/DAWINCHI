@@ -27,7 +27,15 @@
       }
 
       @include tablet-media {
-        max-width: 100% !important;
+        max-width: 100%;
+      }
+
+      @include mobile-media {
+        max-width: clamp(#{rem(300)}, 91.75vw, #{rem(720)});
+      }
+
+      @include mobile-s-media {
+        max-width: clamp(#{rem(300)}, 84.5vw, #{rem(420)});
       }
     }
     .fNdNyi {
@@ -51,6 +59,10 @@
   &__info-buttons {
     @include tablet-media {
       max-width: rem(320);
+    }
+
+    @include mobile-s-media {
+      max-width: unset;
     }
   }
 

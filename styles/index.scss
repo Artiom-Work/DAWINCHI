@@ -6,7 +6,6 @@
 @use "./base/globals";
 @use "./base/animation";
 //blocks
-@use "./blocks/preloader";
 @use "./blocks/button";
 @use "./blocks/logo";
 @use "./blocks/menu";
@@ -28,6 +27,6 @@
 @use "./blocks/reviews";
 @use "./blocks/price-drive";
 @use "./blocks/profit";
-@use "./blocks/svc";
+@use "./blocks/about-us";
 @use "./blocks/contacts";
 @use "./blocks/footer";

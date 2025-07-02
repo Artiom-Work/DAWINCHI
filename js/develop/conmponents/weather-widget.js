@@ -1,6 +1,6 @@
 'use strict';
 // Functions for weater widget (hide links)
-// Sourse of widget https://dash.elfsight.com/apps/weather?installationWidgetPid=62b8e7b0-750a-48cf-8d21-dceaadcbf04b
+// Sourse of widget https://dash.elfsight.com/apps/weather?installationWidgetPid=6e15d0d0-956c-4c31-a60e-e0858c9c1b6e
 
 export function stylingWeatherWidget() {
 	window.addEventListener('load', () => {
@@ -10,18 +10,15 @@ export function stylingWeatherWidget() {
 		document.body.appendChild(weatherScript);
 
 		const containerObserver = new MutationObserver((mutations, obs) => {
-			const weatherWidget = document.querySelector('.elfsight-app-62b8e7b0-750a-48cf-8d21-dceaadcbf04b');
+			const weatherWidget = document.querySelector('.elfsight-app-6e15d0d0-956c-4c31-a60e-e0858c9c1b6e');
 			if (weatherWidget) {
 				obs.disconnect();
 
 				const innerObserver = new MutationObserver((mutations, innerObs) => {
 					const hideWidgetLink = weatherWidget.querySelector('a[rel="noreferrer"]');
 					const locationName = weatherWidget.querySelector('.hsazHl');
-					if (locationName) {
-						locationName.textContent = 'Большие горки';
-					}
+
 					if (locationName || hideWidgetLink) {
-						locationName.textContent = 'Большие горки';
 						hideWidgetLink.style.display = 'none';
 						innerObs.disconnect();
 					}

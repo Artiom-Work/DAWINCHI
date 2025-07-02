@@ -2,6 +2,14 @@
 
 .profit {
   &-slider {
+    &__controls {
+      @include mobile-s-media {
+        position: relative;
+        max-width: rem(150);
+        margin-inline: rem(10) auto;
+      }
+    }
+
     &__button {
       @include step-circle;
 
@@ -28,7 +36,8 @@
       }
 
       @include mobile-s-media {
-        top: 20%;
+        top: unset;
+        bottom: 0;
       }
     }
   }
@@ -50,7 +59,7 @@
       @include square(#{rem(420)});
 
       position: relative;
-
+      align-self: baseline;
       border-radius: 50%;
       overflow: hidden;
       flex-shrink: 0;
@@ -59,6 +68,11 @@
       @include mobile-media {
         width: rem(190);
         height: rem(190);
+      }
+
+      @include mobile-s-media {
+        width: rem(150);
+        height: rem(150);
       }
 
       &::before {
@@ -109,9 +123,25 @@
 
   &__text {
     font-size: rem(18);
+    line-height: 1.5;
 
     @include mobile-media {
       font-size: rem(12);
+    }
+  }
+
+  &__link {
+    @include fluid-text(22, 15);
+
+    font-weight: 700;
+    font-style: normal;
+    color: var(--color-accent-dark);
+
+    &--phone {
+      margin-bottom: rem(10);
+    }
+    @include active {
+      color: var(--color-yellow);
     }
   }
 }

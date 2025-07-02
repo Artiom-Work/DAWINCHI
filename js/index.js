@@ -422,7 +422,7 @@ const profitSlider = new Swiper(".profit-slider", {
 			centeredSlides: false,
 			slidesPerView: 1.2,
 			freeMode: true,
-			spaceBetween: 0,
+			spaceBetween: 20,
 		},
 		768: {
 			slidesPerView: 'auto',

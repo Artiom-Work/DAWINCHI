@@ -205,8 +205,8 @@
 
 			<picture class="promo__image-wrapper">
 				<source srcset="./images/promo/promo-bg-mobile.webp" media="(max-width: 767px)" type="image/webp">
-				<source srcset="./images/promo/promo-bg.webp 1x , ./images/promo/promo-bg@2x.webp 2x" type="image/webp">
-				<img class="promo__image" src="./images/promo/promo-bg-mobile.webp" alt="Фото DAWINCHI WAKE PARK" width="767"
+				<source srcset="./images/promo/promo-bg.webp" type="image/webp">
+				<img class="promo__image" src="./images/promo/promo-bg-mobile.webp" alt="Фото DAWINCHI WAKE PARK" width="360"
 					height="700" loading="lazy">
 			</picture>
 
@@ -518,8 +518,8 @@
 							<article class="service__card">
 								<h3 class="visually-hidden">Описание услуги</h3>
 
-								<img class="service__image" src="./images/services/.webp" alt="Райдер на фойле" width="320" height="211"
-									loading="lazy">
+								<img class="service__image service__image--obj-position-bottom" src="./images/services/wingfoil.webp"
+									alt="Райдер на фойле" width="320" height="211" loading="lazy">
 
 								<div class="service__card-description">
 									<h4 class="service__title h3">
@@ -637,8 +637,9 @@
 							<article class="service__card">
 								<h3 class="visually-hidden">Описание услуги</h3>
 
-								<img class="service__image" src="./images/services/sup-boarding.webp" alt="Девушка на SUP-борде"
-									width="320" height="211" loading="lazy">
+								<img class="service__image service__image--obj-position-bottom"
+									src="./images/services/sup-boarding.webp" alt="Девушка на SUP-борде" width="320" height="211"
+									loading="lazy">
 								<div class="service__card-description">
 									<h4 class="service__title h3">
 										SUP-бординг
@@ -1595,8 +1596,7 @@
 							</h3>
 
 							<span class="price-drive__slide-text">
-								(1&nbsp;сет = 10&nbsp;минут)<br>
-								услуги инструктора оплачиваются отдельно
+								(1&nbsp;сет = 10&nbsp;минут)
 							</span>
 						</article>
 
@@ -1797,9 +1797,12 @@
 
 								<div class="profit__text">
 									<p>
-										<time datetime="P4D">Понедельник-четверг</time><br>
-										<time datetime="PT2H">9:00-11:00</time><br>
-										50% на&nbsp;<q>сет 10&nbsp;мин</q>
+										&mdash;&nbsp;катайся на&nbsp;вейкборде со&nbsp;скидкой&nbsp;50%!
+									</p>
+									<p>
+										<time datetime="P4D">Пн&mdash;чт&nbsp;</time>|
+										<time datetime="PT3H">9:00-12:00</time><br>
+										Всего 500₽ за&nbsp;сет + прокат.
 									</p>
 								</div>
 							</div>
@@ -1817,14 +1820,17 @@
 								<span class="profit__slide-counter">2/3</span>
 
 								<h3 class="profit__slide-name">
-									выходные и&nbsp;праздники
+									1 + 1 = 3
 								</h3>
-
 								<div class="profit__text">
 									<p>
-										<time datetime="P2D">Суббота, Воскресенье</time> и&nbsp;праздничные дни<br>
-										&mdash;&nbsp;<span>3500&nbsp;рублей.</span><br>
-										*Услуги инструктора оплачиваются отдельно.
+										&mdash;&nbsp;отъездив 2&nbsp;сета, получи 3-й в&nbsp;подарок!
+									</p>
+									<p>
+										<time datetime="P5D">Пн&mdash;пт&nbsp;</time>|
+										<time datetime="PT3H">9:00-12:00</time><br>
+										Больше активности&nbsp;&mdash; меньше затрат!<br>Акция распространяется только на&nbsp;сеты
+										по&nbsp;абонементу.
 									</p>
 								</div>
 							</div>
@@ -1843,16 +1849,27 @@
 								<span class="profit__slide-counter">3/3</span>
 
 								<h3 class="profit__slide-name">
-									Выгодное время
+									Вейк+кемп
 								</h3>
+
 
 								<div class="profit__text">
 									<p>
-										<time datetime="P5D">Понедельник-пятница</time><br>
-										<time datetime="PT6H">до&nbsp;17:00</time><br>
-										&mdash;&nbsp;<span>4500&nbsp;рублей.</span><br>
+										&mdash;&nbsp;ночь в&nbsp;палатке + 2&nbsp;сета с&nbsp;прокатом и&nbsp;обучением всего за&nbsp;7000₽
+									</p>
+									<p>
+										Акция действует:<br>
+										<time datetime="P4D">Пн&mdash;чт&nbsp;</time><br>
+										Количество мест ограничено!<br>
+										Звони и&nbsp;бронируй по&nbsp;телефону:<br>
 									</p>
 								</div>
+
+								<address>
+									<a class="profit__link profit__link--phone underline-effect" href="tel:89312205000" target="_blank"
+										title="Позвонить для брони">8&nbsp;(931)&nbsp;220-50-00</a>
+								</address>
+
 							</div>
 						</article>
 
@@ -2085,12 +2102,14 @@
 
 				<ul class="footer__privacy-policy-list">
 					<li>
-						<a class="footer__privacy-policy-link footer__link" href="./index.html" target="_blank">
+						<a class="footer__privacy-policy-link footer__link" href="./files/privacy-policy/privacy-policy.pdf"
+							target="_blank">
 							Политика конфиденциальности
 						</a>
 					</li>
 					<li>
-						<a class="footer__privacy-policy-link footer__link" href="./index.html">
+						<a class="footer__privacy-policy-link footer__link"
+							href="./files/abdication-of-responsibility/abdication-of-responsibility.pdf" target="_blank">
 							Снятие ответственности
 						</a>
 					</li>

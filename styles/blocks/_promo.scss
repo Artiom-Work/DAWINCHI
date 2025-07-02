@@ -28,10 +28,6 @@
       overflow: hidden;
     }
 
-    @include mobile-s-media {
-      object-position: center var(--header-height);
-    }
-
     &-wrapper {
       position: absolute;
       z-index: -2;

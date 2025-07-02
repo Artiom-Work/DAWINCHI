@@ -30,6 +30,12 @@
     margin-bottom: rem(15);
     flex-shrink: 0;
 
+    &--obj-position-bottom {
+      object-position: bottom;
+    }
+    &--obj-position-top {
+      object-position: top;
+    }
     @include mobile-media-above {
       border-radius: var(--border-radius-small);
       width: rem(240);
@@ -58,7 +64,7 @@
 
     &--expanded {
       padding-block: rem(15) 0;
-      padding-inline: 0 var(--container-padding-x);
+      padding-inline: 0 rem(10);
       position: absolute;
       left: 0;
       right: 0;
@@ -77,6 +83,7 @@
         -webkit-line-clamp: unset;
         height: auto;
         overflow-y: auto;
+        max-height: rem(320);
 
         @include mobile-media-above {
           height: rem(140);
@@ -101,8 +108,6 @@
       @include mobile-s-media-above {
         -webkit-line-clamp: 4;
         height: rem(70);
-      }
-      @include mobile-media-above {
       }
     }
 

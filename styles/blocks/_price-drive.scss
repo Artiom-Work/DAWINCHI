@@ -59,15 +59,28 @@
 
   &__slide-name {
     @include abs-x;
+    @include fluid-text(23, 17);
 
     color: var(--color-light);
     font-family: var(--font-family-second);
     margin-top: rem(65);
     text-transform: uppercase;
+    text-align: center;
 
+    &--big-margin {
+      margin-top: rem(95);
+    }
+    &--color {
+      color: var(--color-drak);
+      font-weight: 700;
+    }
     @include mobile-media {
       margin-top: rem(45);
       font-size: rem(14);
+
+      &--big-margin {
+        margin-top: rem(85);
+      }
     }
   }
 
@@ -102,7 +115,7 @@
   &__slide-text {
     position: relative;
     text-align: center;
-    max-width: 90%;
+    width: 90%;
     padding-inline: rem(5);
     font-family: var(--font-family-second);
     cursor: default;
@@ -119,6 +132,10 @@
       bottom: -10%;
       left: 0;
       transition-duration: var(--transition-duration) !important;
+    }
+
+    &--small {
+      @include fluid-text(14, 13);
     }
   }
 

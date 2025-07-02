@@ -20,7 +20,11 @@
   }
 
   &__info-weather {
+    .bfFYjE {
+      display: none !important;
+    }
     .lgFavo {
+      opacity: 1 !important;
       max-width: 100%;
       @include desktop-media {
         max-width: clamp(#{rem(5)}, 40vw, #{rem(640)});

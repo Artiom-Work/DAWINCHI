@@ -73,11 +73,18 @@ function initServiceToggleButtons() {
 	document.querySelectorAll('.service__toggle-button').forEach(button => {
 		button.addEventListener('click', () => {
 			const textBlock = button.closest('.service__toggle');
+			const textContent = textBlock.querySelector('.service__toggle-text');
+
 			const isExpanded = textBlock.classList.toggle('service__toggle--expanded');
 			button.setAttribute('aria-expanded', isExpanded);
+
+			if (!isExpanded && textContent) {
+				textContent.scrollTop = 0;
+			}
 		});
 	});
 }
+
 
 
 

@@ -18,6 +18,13 @@ const imagesPathes = [
 	'./images/about-us/about-us-1.webp',
 	'./images/about-us/about-us-2.webp',
 	'./images/about-us/about-us-3.webp',
+	'./images/about-us/about-us-4.webp',
+	'./images/about-us/about-us-5.webp',
+	'./images/about-us/about-us-6.webp',
+	'./images/about-us/about-us-7.webp',
+	'./images/about-us/about-us-8.webp',
+	'./images/about-us/about-us-9.webp',
+	'./images/about-us/about-us-10.webp',
 ];
 // ================================= //
 window.addEventListener('load', () => {
@@ -357,8 +364,14 @@ function initServiceToggleButtons() {
 	document.querySelectorAll('.service__toggle-button').forEach(button => {
 		button.addEventListener('click', () => {
 			const textBlock = button.closest('.service__toggle');
+			const textContent = textBlock.querySelector('.service__toggle-text');
+
 			const isExpanded = textBlock.classList.toggle('service__toggle--expanded');
 			button.setAttribute('aria-expanded', isExpanded);
+
+			if (!isExpanded && textContent) {
+				textContent.scrollTop = 0;
+			}
 		});
 	});
 }
@@ -417,7 +430,6 @@ const profitSlider = new Swiper(".profit-slider", {
 		768: {
 			slidesPerView: 'auto',
 			spaceBetween: 93,
-			loop: true,
 		}
 	}
 });

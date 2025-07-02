@@ -7,7 +7,7 @@
   color: var(--color-light);
 
   @include mobile-media {
-    --mainImageHeight: #{rem(761)};
+    --mainImageHeight: #{rem(783)};
   }
 
   &__video {

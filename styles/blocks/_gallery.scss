@@ -2,6 +2,7 @@
 
 .gallery-slider {
   position: relative;
+  max-width: rem(1600);
 
   @include laptop-media {
     height: fluid(650, 360);
@@ -19,11 +20,15 @@
 
   &__pagination {
     position: absolute;
+    display: flex;
+    justify-content: space-between;
+    max-width: rem(360);
+    width: 100%;
+    padding-inline: rem(20);
     left: 50% !important;
     translate: -50%;
     bottom: fluid(50, 17) !important;
     z-index: 3;
-    width: unset !important;
 
     .swiper-pagination-bullet {
       opacity: 1;
@@ -32,13 +37,13 @@
       width: rem(10);
       height: rem(10);
 
-      &:not(:last-child) {
-        margin-right: rem(30);
-      }
       &-active {
         background-color: var(--color-light);
       }
 
+      @include hover {
+        background-color: var(--color-light);
+      }
       & {
         position: relative;
 

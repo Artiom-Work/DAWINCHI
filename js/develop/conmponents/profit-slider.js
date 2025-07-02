@@ -18,7 +18,6 @@ export const profitSlider = new Swiper(".profit-slider", {
 		768: {
 			slidesPerView: 'auto',
 			spaceBetween: 93,
-			loop: true,
 		}
 	}
 });

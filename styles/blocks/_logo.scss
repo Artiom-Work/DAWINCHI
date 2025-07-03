@@ -10,6 +10,10 @@
     width: fluid(150, 95);
     height: fluid(50, 29);
   }
+  @include mobile-media {
+    width: rem(128);
+    height: rem(39);
+  }
   @include hover {
     filter: invert(1) sepia(0.5) hue-rotate(190deg) saturate(2.5)
       brightness(80%);

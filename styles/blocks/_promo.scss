@@ -27,14 +27,24 @@
     @media (max-width: 1640px) {
       overflow: hidden;
     }
+    @include mobile-media {
+      width: 100%;
+      max-width: rem(767);
+    }
     @include mobile-s-media {
       object-position: center var(--header-height);
+      max-width: rem(480);
     }
+
     &-wrapper {
       position: absolute;
       z-index: -2;
       top: calc(var(--header-height) * -1);
       filter: brightness(60%);
+
+      @include mobile-media {
+        max-width: 100%;
+      }
     }
   }
 
@@ -46,6 +56,10 @@
 
     padding-block: fluid(115, 50) rem(50);
     text-align: center;
+
+    @include mobile-media {
+      padding-block: rem(60) rem(40);
+    }
   }
 
   &__title {

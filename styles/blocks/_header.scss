@@ -15,6 +15,11 @@
   animation-timeline: scroll();
   animation-range: rem(100) rem(200);
 
+  .container {
+    @include mobile-s-media {
+      padding-inline: rem(7);
+    }
+  }
   &__inner {
     @include flex-space-between;
 

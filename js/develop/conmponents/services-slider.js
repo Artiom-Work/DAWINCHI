@@ -12,6 +12,13 @@ export function initServicesSlider() {
 		navigation: {
 			nextEl: ".services__slider-pagonation-button",
 		},
+		preloadImages: false,
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 1,
+			loadOnTransitionStart: true,
+			checkInView: true,
+		},
 		breakpoints: {
 			768: {
 				spaceBetween: 90,

@@ -42,17 +42,16 @@
     height: var(--mainImageHeight);
     width: 100vw;
 
-    // @media (max-width: 1640px) {
-    //   // overflow: hidden;
-    // }
-    @include mobile-media {
-      width: 100%;
-      max-width: rem(767);
+    @media (max-width: 1640px) {
+      overflow: hidden;
     }
-    // @include mobile-s-media {
-    //   object-position: center var(--header-height);
-    //   max-width: rem(480);
+    // @include mobile-media {
+    //   width: 100%;
+    //   max-width: rem(767);
     // }
+    @include mobile-s-media {
+      object-position: center var(--header-height);
+    }
 
     &-wrapper {
       position: absolute;

@@ -3,7 +3,13 @@
 export const profitSlider = new Swiper(".profit-slider", {
 	centeredSlides: true,
 	slidesPerView: 1,
-	lazy: true,
+	preloadImages: false,
+	lazy: {
+		loadPrevNext: true,
+		loadPrevNextAmount: 1,
+		loadOnTransitionStart: true,
+		checkInView: true,
+	},
 	navigation: {
 		nextEl: ".profit-slider__button--next",
 		prevEl: ".profit-slider__button--prev",

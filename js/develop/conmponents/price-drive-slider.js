@@ -5,7 +5,13 @@ export const priceDriveSlider = new Swiper(".price-drive-slider", {
 	centeredSlides: true,
 	spaceBetween: 15,
 	loop: true,
-	lazy: true,
+	preloadImages: false,
+	lazy: {
+		loadPrevNext: true,
+		loadPrevNextAmount: 1,
+		loadOnTransitionStart: true,
+		checkInView: true,
+	},
 	navigation: {
 		nextEl: ".price-drive__button",
 	},

@@ -388,6 +388,13 @@ const gallerySlider = new Swiper(".gallery-slider", {
 		el: ".gallery-slider__pagination",
 		clickable: true,
 	},
+	preloadImages: false,
+	lazy: {
+		loadPrevNext: true,
+		loadPrevNextAmount: 1,
+		loadOnTransitionStart: true,
+		checkInView: true,
+	},
 	autoplay: {
 		delay: 3500,
 		disableOnInteraction: false,
@@ -398,7 +405,13 @@ const priceDriveSlider = new Swiper(".price-drive-slider", {
 	centeredSlides: true,
 	spaceBetween: 15,
 	loop: true,
-	lazy: true,
+	preloadImages: false,
+	lazy: {
+		loadPrevNext: true,
+		loadPrevNextAmount: 1,
+		loadOnTransitionStart: true,
+		checkInView: true,
+	},
 	navigation: {
 		nextEl: ".price-drive__button",
 	},
@@ -419,10 +432,16 @@ const priceDriveSlider = new Swiper(".price-drive-slider", {
 const profitSlider = new Swiper(".profit-slider", {
 	centeredSlides: true,
 	slidesPerView: 1,
-	lazy: true,
 	navigation: {
 		nextEl: ".profit-slider__button--next",
 		prevEl: ".profit-slider__button--prev",
+	},
+	preloadImages: false,
+	lazy: {
+		loadPrevNext: true,
+		loadPrevNextAmount: 1,
+		loadOnTransitionStart: true,
+		checkInView: true,
 	},
 	breakpoints: {
 		480: {

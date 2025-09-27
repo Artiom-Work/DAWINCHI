@@ -45,10 +45,10 @@
     @media (max-width: 1640px) {
       overflow: hidden;
     }
-    // @include mobile-media {
-    //   width: 100%;
-    //   max-width: rem(767);
-    // }
+    @include mobile-media {
+      width: 100%;
+      max-width: rem(767);
+    }
     @include mobile-s-media {
       object-position: center var(--header-height);
     }
